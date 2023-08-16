@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Button = () => {
+const HomeHeader = () => {
   return (
     <View>
-      <Text>Button</Text>
+      <Text>HomeHeader</Text>
     </View>
   )
-};
+}
 
-export default Button;
+export default HomeHeader;
