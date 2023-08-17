@@ -10,6 +10,8 @@ import Home from "./screens/Home";
 
 import Search from "./screens/Search";
 
+import TravelGuide from "./screens/TravelGuide";
+
 
 const theme = {
   ...DefaultTheme,
@@ -50,8 +52,8 @@ export default function App() {
           >
 
             <Stack.Screen
-              name="Search"
-              component={Search}
+              name="Travel Guide"
+              component={TravelGuide}
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
