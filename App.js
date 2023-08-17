@@ -3,8 +3,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from 'expo-font';
 
+// import { View, Text, Pressable, TouchableOpacity } from "react-native";
+
 import Home from "./screens/Home";
-import Ticket from "./screens/Ticket";
+// import Ticket from "./screens/Ticket";
+
+import Search from "./screens/Search";
+
 
 const theme = {
   ...DefaultTheme,
@@ -18,28 +23,54 @@ const Stack = createStackNavigator();
 
 export default function App() {
 
-  const [loaded] = useFonts({
-    InterBold: require("./assets/fonts/Inter-Bold.ttf"),
-    InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
-    InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
-    InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
-    InterLight: require("./assets/fonts/Inter-Light.ttf"),
+  const [hideSplashScreen, setHideSplashScreen] = React.useState(true);
+
+
+  const [fontsLoaded, error] = useFonts({
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-SemiBold": require("./assets/fonts/Poppins-SemiBold.ttf"),
+    "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+    "Poppins-ExtraBold": require("./assets/fonts/Poppins-ExtraBold.ttf"),
   });
 
-  if(!loaded) return null;
+  if (!fontsLoaded && !error) {
+    return null;
+  }
 
   return (
-    <NavigationContainer theme={theme}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName="Home"
-      >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Ticket" component={Ticket} />
-      </Stack.Navigator>
-    </NavigationContainer>
+
+    // <>
+      <NavigationContainer>
+        {hideSplashScreen ? (
+          <Stack.Navigator 
+            screenOptions={{ 
+              headerShown: false 
+            }}
+            initialRouteName="Search"
+          >
+
+            <Stack.Screen
+              name="Search"
+              component={Search}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        ) : null}
+      </NavigationContainer>
+    // </>
+
+    // <NavigationContainer >
+    //   <Stack.Navigator
+    //     screenOptions={{
+    //       headerShown: false,
+    //     }}
+    //     initialRouteName="Home"
+    //   >
+    //     <Stack.Screen name="Home" component={Home} />
+    //     <Stack.Screen name="Ticket" component={Ticket} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 }
 
