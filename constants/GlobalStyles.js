@@ -21,7 +21,8 @@ export const FontFamily = {
     deepskyblue: "#00b2ff",
     primary: "rgba(11, 42, 69, 0.1)",
     darkText: "#8d8e99",
-    white: "#ECE4F2"
+    white: "#ECE4F2",
+    ashhh: "#CBC7CE"
   };
   /* border radiuses */
   export const Border = {

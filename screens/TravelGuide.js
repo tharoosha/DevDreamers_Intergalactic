@@ -24,7 +24,7 @@ const TravelGuide = () => {
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
-        colors={['rgba(4, 8, 19, 0.89)','#000']}
+        colors={['rgba(1, 11, 21, 0.66)','#000']}
         style={styles.rectangleLineargradient}
       />
       <View contentContainerStyle= {{
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   login: {
-    width: 352,
-    height: 477,
+    width: 356,
+    height: 677,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',

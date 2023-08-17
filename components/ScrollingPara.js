@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import PhotoGrid from './ImageGrid';
+import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
+
+import PhotoGrid from './PhotoGrid';
 
 const ScrollingParagraphs = () => {
   const deccription = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio non justo ultrices euismod.",] ;
@@ -16,6 +18,7 @@ const ScrollingParagraphs = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <PhotoGrid/>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Valora Crater</Text>
       </View>
@@ -53,11 +56,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
+    color:Color.white
   },
   index: {
     marginRight: 8,
     fontSize: 16,
     fontWeight: 'bold',
+    color:Color.ashhh
+
   },
 
   indexContainer: {
@@ -72,6 +78,7 @@ const styles = StyleSheet.create({
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
+    color:Color.ashhh
   },
   paragraphContainer: {
     marginBottom: 16,
@@ -82,6 +89,8 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     lineHeight: 24,
+    color:Color.ashhh
+
   },
 });
 

@@ -3,12 +3,23 @@ import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import Button from './Button'
 import Input from './Input'
+import DatePicker from "react-native-modal-datetime-picker";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import DateTimeCompoenet from '../components/DateTime';
+
+
+
+const icon = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/icons/calendar.png'
 
 const SearchForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [mode, setMode] = useState('');
+
+  
+
+  
 
   const handleSubmit = () => {
     console.log('Name:', name);
@@ -36,6 +47,7 @@ const SearchForm = () => {
         />
         <View style={styles.row}>
           <View style={styles.inputWrap}>
+            
             <Input
               placeholder={"12/08/2157"}
               value={date}
@@ -43,6 +55,10 @@ const SearchForm = () => {
               width={145}
               label={"Date"}
             />
+            {/* <TouchableOpacity onPress={showDatePicker} style={styles.dateIcon}>
+              <Icon name="calendar" size={20} color="#000" />
+            </TouchableOpacity> */}
+            
           </View>
           <View style={styles.inputWrap}>
             <Input
@@ -70,6 +86,7 @@ const SearchForm = () => {
           bgcolor={Color.white}
           textcolor={Color.deepskyblue}
         />
+        <DateTimeCompoenet/>
       </View>
     // </SafeAreaView>
   )
@@ -98,6 +115,9 @@ const styles = StyleSheet.create({
   inputWrap: {
     flex: 1,
     alignContent: 'center',
+  },
+  datePicker: {
+    width: 200,
   },
 });
 

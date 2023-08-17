@@ -5,5 +5,5 @@ import SearchForm from "./SearchForm";
 export {
     HomeHeader,
     Button,
-    SearchForm
+    SearchForm,
 }
