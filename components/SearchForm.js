@@ -1,8 +1,7 @@
 import { View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
-import Button from './Button'
-import Input from './Input'
+import {Button, Input, DateTime} from '../components'
 
 const SearchForm = () => {
   const [name, setName] = useState('');
@@ -36,13 +35,14 @@ const SearchForm = () => {
         />
         <View style={styles.row}>
           <View style={styles.inputWrap}>
-            <Input
+            {/* <Input
               placeholder={"12/08/2157"}
               value={date}
               onChangeText={(text) => setDate(text)}
               width={145}
               label={"Date"}
-            />
+            /> */}
+            <DateTime />
           </View>
           <View style={styles.inputWrap}>
             <Input
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
   inputWrap: {
     flex: 1,
     alignContent: 'center',
+    marginLeft: 5
   },
 });
 
