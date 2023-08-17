@@ -3,10 +3,11 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import React from 'react'
 
 // const Button = ({ minWidth, fontSize, handlePress, ...props }) => {
-const Input = ({placeholder, value, onChangeText, width, ...props }) => {
+const Input = ({placeholder, value, onChangeText, width, label, ...props }) => {
 
   return (
     <View>
+        <Text style={styles.input_text}>{label}</Text>
         <TextInput
           style={styles.input}
         placeholder={placeholder}
@@ -35,6 +36,18 @@ const styles = StyleSheet.create({
         marginBottom: 5,
        
     },
+    input_text:{
+        fontSize: 12,
+        lineHeight: 18,
+        fontWeight: "700",
+        fontFamily: "Poppins-Bold",
+        color: "#fff",
+        textAlign: "left",
+        width: 80,
+        height: 13,
+        margin: 7,
+        paddingLeft: 10
+      },
     });
 
 export default Input;
