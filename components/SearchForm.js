@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
-import {Button, Input, DateTime} from '../components'
+// import {Button, Input} from '../components'
 // import moment from 'moment';
-
+import Button from './Button';
+import Input from './Input';
 
 // import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePicker from "react-native-modal-datetime-picker";
