@@ -3,15 +3,18 @@ import { useNavigation } from "@react-navigation/native";
 import { StyleSheet,Image, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
+import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from 'expo-linear-gradient';
+import Button from "../components/Button";
+
 
 import SeatSetup from "../components/SeatSetup";
 import FlexboxExample from "../components/FlightDetails";
 
 
 // const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
-const uri = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png'
+const uri = '..//assets/images/Shadow_Realm_resize.png'
 // import { LinearGradient } from "expo-linear-gradient";
 // import { Image } from "expo-image";
 
@@ -41,7 +44,7 @@ const SeatBooking = () => {
             <FlexboxExample />
           </BlurView>
         </View>
-           
+
       </View>
 
       <ScrollView contentContainerStyle= {{
@@ -55,9 +58,12 @@ const SeatBooking = () => {
           <BlurView tint="default" intensity={15} >
             <SeatSetup />
           </BlurView>
+
+
         </View>
-           
+
       </ScrollView>
+
     </View>
   );
 };
