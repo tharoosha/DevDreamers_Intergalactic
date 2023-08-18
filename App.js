@@ -10,6 +10,8 @@ import Home from "./screens/Home";
 
 import Search from "./screens/Search";
 
+import SeatBooking from "./screens/SeatBooking";
+
 import TravelGuide from "./screens/TravelGuide";
 
 
@@ -52,9 +54,9 @@ export default function App() {
           >
 
             <Stack.Screen
-              name="Travel Guide"
-              component={TravelGuide}
-              options={{ headerShown: false }}
+              name="Seat Booking"
+              component={SeatBooking}
+              options={{ headerShown: true }}
             />
             <Stack.Screen name="Home" component={Home} />
           </Stack.Navigator>
