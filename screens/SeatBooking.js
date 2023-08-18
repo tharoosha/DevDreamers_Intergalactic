@@ -6,6 +6,9 @@ import { BlurView } from 'expo-blur';
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from 'expo-linear-gradient';
 
+import SeatSetup from "../components/SeatSetup";
+import FlexboxExample from "../components/FlightDetails";
+
 
 // const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
 const uri = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png'
@@ -35,7 +38,7 @@ const SeatBooking = () => {
         }}> 
         <View style={styles.flightDetails}>
           <BlurView tint="default" intensity={15} >
-          
+            <FlexboxExample />
           </BlurView>
         </View>
            
@@ -48,9 +51,9 @@ const SeatBooking = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}> 
-        <View style={styles.login}>
+        <View style={styles.login }>
           <BlurView tint="default" intensity={15} >
-
+            <SeatSetup />
           </BlurView>
         </View>
            
