@@ -13,7 +13,7 @@ const SearchForm = () => {
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Date:', date);
-    console.log('Mode',mode)  };
+    console.log('Mode', mode)};
 
   return (
     // <SafeAreaView style={styles.container}>

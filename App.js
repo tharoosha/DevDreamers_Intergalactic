@@ -9,6 +9,8 @@ import Home from "./screens/Home";
 // import Ticket from "./screens/Ticket";
 
 import Search from "./screens/Search";
+import Bookings from "./screens/Bookings";
+
 
 
 const theme = {
@@ -46,12 +48,12 @@ export default function App() {
             screenOptions={{ 
               headerShown: false 
             }}
-            initialRouteName="Search"
+            initialRouteName="Bookings"
           >
 
             <Stack.Screen
-              name="Search"
-              component={Search}
+              name="Bookings"
+              component={Bookings}
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
