@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Button, ScrollView } from 'react-native';
+import {Text, StyleSheet,TouchableOpacity, View, Button, ScrollView } from 'react-native';
 import { SvgXml } from 'react-native-svg';
+import CustomButton from './CustomButton';
 
 
 const svgContent = `
@@ -18,13 +19,12 @@ const svgContent = `
 `;
 
 const tabContent = [
-  [<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,],
-  [<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,],
-  [<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,<SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />, <SvgXml xml={svgContent.replace('{FILL_COLOR}', 'black')} />,],
-  // ...
-];
+    Array(22).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'primary')} />),
+    Array(7).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+    Array(14).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+  ];
 
-const tabLabels = ['First           ', 'Business       ', 'Economy       '];
+const tabLabels = ['First', 'Business', 'Economy'];
 
 const SeatSetup = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -43,7 +43,23 @@ const SeatSetup = () => {
 
   const renderTabButtons = () => {
     return tabLabels.map((label, index) => (
-      <Button key={index} onPress={() => handleTabChange(index)} title={label} />
+      <TouchableOpacity
+        key={index}
+        onPress={() => handleTabChange(index)}
+        style={[
+          styles.tabButton,
+          currentTab === index && styles.selectedTabButton,
+        ]}
+      >
+        <Text
+          style={[
+            styles.tabButtonText,
+            currentTab === index && styles.selectedTabButtonText,
+          ]}
+        >
+          {label}
+        </Text>
+      </TouchableOpacity>
     ));
   };
 
@@ -55,7 +71,7 @@ const SeatSetup = () => {
     for (let i = 0; i < numRows; i++) {
       const rowItems = items.slice(i * 7, (i + 1) * 7);
       const rowView = rowItems.map((item, index) => {
-        const svgXml = svgContent.replace('{FILL_COLOR}', selectedIcons[i * 7 + index] ? 'red' : 'black');
+        const svgXml = svgContent.replace('{FILL_COLOR}', selectedIcons[i * 7 + index] ? 'deepskyblue' : 'white');
         return (
           <View
             key={index}
@@ -85,14 +101,40 @@ const SeatSetup = () => {
       <View style={{ flexDirection: 'row', justifyContent: 'center', padding: 1 , marginBottom: 8 , marginTop: 10}}>
         {renderTabButtons()}
       </View>
-      <View style={{ borderRadius: 10, borderWidth: 1, borderColor: 'black', padding: 10, margin: 10 }}>
+      <View style={{ borderRadius: 10, borderWidth: 1, borderColor: 'white', padding: 10, margin: 10 }}>
       <ScrollView contentContainerStyle={{ padding: 1 }}>
         {renderTabContent()}
       </ScrollView>
     </View>
+    
+    <CustomButton title="Submit" onPress={() => alert('You tapped the button!')} />
     </View>
   );
 };
+
+
+const styles = StyleSheet.create({
+    tabButtonsContainer: {
+      flexDirection: 'row',
+      marginBottom: 30,
+    },
+    tabButton: {
+      paddingHorizontal: 34,
+      paddingVertical: 10,
+    },
+    selectedTabButton: {
+      borderBottomWidth: 2,
+      borderBottomColor: 'deepskyblue',
+      borderBottomEndRadius: 10,
+    },
+    tabButtonText: {
+      color: 'white',
+    },
+    selectedTabButtonText: {
+      color: 'white',
+    },
+    // ...
+  });
 
 export default SeatSetup;
 
