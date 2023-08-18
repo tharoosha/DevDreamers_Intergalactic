@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <SafeAreaView style={StyleSheet.container}>
             {/* <Button /> */}
-            <HomeHeader />
+            {/* <HomeHeader /> */}
             <Text style={StyleSheet.text}>Hello</Text>
 
         </SafeAreaView>
