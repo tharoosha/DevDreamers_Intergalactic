@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import ScrollingParagraphs from "../components/ScrollingPara";
 
-import bg from "/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png"
+import bg from "../assets/images/Shadow_Realm_resize.png"
 // const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
 const uri = '..//assets/images/Shadow_Realm_resize.png'
 // import { LinearGradient } from "expo-linear-gradient";
@@ -20,7 +20,7 @@ const TravelGuide = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={bg} />
+      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={require(uri)} />
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
