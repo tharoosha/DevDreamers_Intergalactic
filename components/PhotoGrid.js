@@ -1,15 +1,15 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import React from 'react'
+import { View, Image, StyleSheet, ScrollView } from 'react-native'
 
 const PhotoGrid = () => {
   const photos = [
-    { title: 'Photo 1', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4_(1).png') },
-    { title: 'Photo 2', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4_(2).png') },
-    { title: 'Photo 3', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4_(3).png') },
-    { title: 'Photo 4', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4_(4).png') },
-    { title: 'Photo 5', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4_(5).png') },
-    { title: 'Photo 6', source: require('/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/image_4.png') },
-  ];
+    { title: 'Photo 1', source: require('../assets/images/image_4_(1).png') },
+    { title: 'Photo 2', source: require('../assets/images/image_4_(2).png') },
+    { title: 'Photo 3', source: require('../assets/images/image_4_(3).png') },
+    { title: 'Photo 4', source: require('../assets/images/image_4_(4).png') },
+    { title: 'Photo 5', source: require('../assets/images/image_4_(5).png') },
+    { title: 'Photo 6', source: require('../assets/images/image_4.png') },
+  ]
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -20,8 +20,8 @@ const PhotoGrid = () => {
         </View>
       ))}
     </ScrollView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default PhotoGrid;
+export default PhotoGrid
