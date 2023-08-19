@@ -1,0 +1,51 @@
+{
+    "airlineName": "Jetwing Airlines",
+    "date": "2023 - 08 - 11",
+    "from": "BIA",
+    "departureTime": "12.30 PM",
+    "to": "MX100 Region Mars",
+    "seats": [
+      { 
+        "key": "seat1",
+        "flightNo": "JA1943",
+        "seatID": "1A",
+        "class": "Economy",
+        "price": "2499"
+      },
+      {
+        "key": "seat2",
+        "flightNo": "JA1943",
+        "seatID": "2A",
+        "class": "Economy",
+        "price": "2499"
+      },
+      {
+        "key": "seat3",
+        "flightNo": "JA1943",
+        "seatID": "1A",
+        "class": "Economy",
+        "price": "2499"
+      },
+      {
+        "key": "seat4",
+        "flightNo": "JA1943",
+        "seatID": "1A",
+        "class": "Economy",
+        "price": "2499"
+      },
+      {
+        "key": "seat5",
+        "flightNo": "JA1943",
+        "seatID": "2A",
+        "class": "Economy",
+        "price": "2499"
+      },
+      {
+        "key": "seat6",
+        "flightNo": "JA1943",
+        "seatID": "1A",
+        "class": "Economy",
+        "price": "2499"
+      }
+    ]
+  }

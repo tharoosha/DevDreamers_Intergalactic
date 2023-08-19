@@ -1,0 +1,12 @@
+{
+    "promoCodes": [
+      {
+        "code": "SUMMER2023",
+        "discountPercentage": 15
+      },
+      {
+        "code": "FALL23",
+        "discountPercentage": 25
+      }
+    ]
+  }
