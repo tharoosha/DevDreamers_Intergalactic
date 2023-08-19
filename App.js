@@ -2,15 +2,16 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from 'expo-font';
+import { Image } from "expo-image";
+
 
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
 import Home from "./screens/Home";
-// import Ticket from "./screens/Ticket";
 import Search from "./screens/Search";
-
+import SeatBooking from "./screens/SeatBooking";
 import SignUp from "./screens/SignUp";
-import SignIn from "./screens/SignIn"
+import SignIn from "./screens/SignIn";
 
 
 const theme = {
@@ -46,19 +47,22 @@ export default function App() {
         {hideSplashScreen ? (
           <Stack.Navigator 
             screenOptions={{ 
-              headerShown: false 
+              headerShown: false
             }}
             initialRouteName="SignUp"
           >
 
+          
+
             <Stack.Screen
-              name="Seat Booking"
-              component={SeatBooking}
-              options={{ headerShown: true }}
+              name="Search"
+              component={Search}
+              options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="SignIn" component={SignIn} />
+            <Stack.Screen name="SeatBooking" component={SeatBooking} />
 
           </Stack.Navigator>
         ) : null}
