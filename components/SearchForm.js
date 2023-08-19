@@ -59,7 +59,8 @@ const SearchForm = () => {
     hideDatePicker();
   };
 
-return (
+  return (
+    // <SafeAreaView style={styles.container}>
 
       <View style={styles.container}>
         <Input
@@ -68,7 +69,6 @@ return (
           onChangeText={(text) => setName(text)}
           width={314}
           label={"From"}
-          secureTextEntry={false}
         />
         <Input
           placeholder={"Email"}
@@ -76,7 +76,6 @@ return (
           onChangeText={(text) => setEmail(text)}
           width={314}
           label={"To"}
-          secureTextEntry={false}
         />
         <View style={styles.row}>
           <View style={styles.DateTimeContainer}>
@@ -129,11 +128,11 @@ return (
               onChangeText={(text) => setMode(text)}
               width={145}
               label={"Mode"}
-              secureTextEntry={false}
             />
           </View>
-        
-        <View style={{marginBottom: "8%"}}>
+          
+        </View>
+        <View style={{marginBottom: "10%"}}>
           <View style={styles.lineView} />
 
           <Button title="Submit" 
@@ -158,7 +157,6 @@ return (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection:"column",
     paddingHorizontal: 21,
     justifyContent: 'center',
   },
@@ -169,17 +167,16 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: 2,
-    marginBottom: "2%",
+    // marginTop: 70,
   },
   row: {
     flex: 1,
     flexDirection: "row",
-    // alignItems: "center"
+    alignContent: 'center',
   },
   inputWrap: {
     flex: 1,
-    // alignContent: 'center',
-    marginTop:"1%",
+    alignContent: 'center',
     marginLeft: 5
   },
   DateTimeContainer:{
@@ -195,7 +192,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: 80,
     height: 13,
-    margin: 5,
+    margin: 7,
     paddingLeft: 10
   },
   searchWrapper:{
@@ -210,7 +207,7 @@ const styles = StyleSheet.create({
     fontFamily: FontSize.poppinsRegular,
     color: "#fff",
     paddingLeft: 17,
-    // marginBottom: 5,
+    marginBottom: 5,
     alignItems: "center", 
   },
   searchInput:{
@@ -224,4 +221,4 @@ const styles = StyleSheet.create({
   }
 });
 
-// export default SearchForm;
+export default SearchForm;

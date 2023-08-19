@@ -6,11 +6,10 @@ import { useFonts } from 'expo-font';
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
 import Home from "./screens/Home";
-// import Ticket from "./screens/Ticket";
 import Search from "./screens/Search";
-
+import SeatBooking from "./screens/SeatBooking";
 import SignUp from "./screens/SignUp";
-import SignIn from "./screens/SignIn"
+import SignIn from "./screens/SignIn";
 
 
 const theme = {
@@ -52,13 +51,14 @@ export default function App() {
           >
 
             <Stack.Screen
-              name="Seat Booking"
-              component={SeatBooking}
-              options={{ headerShown: true }}
+              name="Search"
+              component={Search}
+              options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="SignIn" component={SignIn} />
+            <Stack.Screen name="SeatBooking" component={SeatBooking} />
 
           </Stack.Navigator>
         ) : null}
