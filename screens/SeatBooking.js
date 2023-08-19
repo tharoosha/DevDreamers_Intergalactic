@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet,Image, ImageBackground, View, Text,TouchableOpacity, SafeAreaView, Dimensions, ScrollView } from "react-native";
+import { StyleSheet,Image, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
@@ -10,7 +10,7 @@ import Button from "../components/Button";
 
 
 import SeatSetup from "../components/SeatSetup";
-import FlexboxExample from "../components/FlightDetails";
+import Flexbox from "../components/Layout";
 
 
 // const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
@@ -41,7 +41,7 @@ const SeatBooking = () => {
         }}> 
         <View style={styles.flightDetails}>
           <BlurView tint="default" intensity={15} >
-            <FlexboxExample />
+            <Flexbox />
           </BlurView>
         </View>
 
