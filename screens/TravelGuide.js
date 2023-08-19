@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 
 // const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
-const uri = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png'
+//const uri = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png'
 // import { LinearGradient } from "expo-linear-gradient";
 // import { Image } from "expo-image";
 
@@ -20,7 +20,7 @@ const TravelGuide = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} />
+      {/* <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} /> */}
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
