@@ -1,10 +1,14 @@
 import React from 'react';
 import {Font ,  View, Text, StyleSheet } from 'react-native';
+import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import Svg, { Circle } from 'react-native-svg';
 import { Image } from "expo-image";
+import CustomButton from './CustomButton';
+import Button from './Button';
+import CardBoxButton from './CardBoxButton';
 
 
-const Flexbox = () => {
+const CardBox = () => {
 
   const uri = '../assets/icons/Spaceships/SpaceX.svg'
 
@@ -22,9 +26,7 @@ const Flexbox = () => {
           <View style={styles.cell1}>
             <Text style={styles.cellText1}>BIA Bonavi</Text>
           </View>
-          <View style={styles.cellx}>
-            <Text style={styles.cellText1}>--></Text>
-          </View>
+
           <View style={styles.cell2}>
             <Text style={styles.cellText1}>MXY Mikavu</Text>
           </View>
@@ -32,27 +34,53 @@ const Flexbox = () => {
         </View>
         <View style={styles.row0}>
           <View style={styles.cell1}>
-            <Text style={styles.cellText1}>2023-08-18</Text>
+            <Text style={styles.cellText2}>2023-08-18</Text>
           </View>
-          <View style={styles.cellx}>
-            <Text style={styles.cellText1}>  </Text>
-          </View>
+
           <View style={styles.cell2}>
-            <Text style={styles.cellText1}>12.30PM</Text>
+            <Text style={styles.cellText2}>12.30PM</Text>
           </View>
+        </View>
+
+        <View style={styles.row0}>
+          <View style={styles.cell1}>
+            <Text style={styles.cellText2}>2023-08-18</Text>
+          </View>
+
+          <View style={styles.cell2}>
+            <Text style={styles.cellText2}>12.30PM</Text>
+          </View>
+        </View>
+
+        <View style={styles.row0}>
+          <View style={styles.cell1}>
+            <Text style={styles.cellText2}>2023-08-18</Text>
+          </View>
+
+          <View style={styles.cell2}>
+            <Text style={styles.cellText2}>12.30PM</Text>
+          </View>
+        </View>
+
+        <View style={styles.row0}>
+          <View style={styles.cell1}>
+            <Text style={styles.cellText2}>          </Text>
+          </View>
+
+          <View style={styles.cell2}>
+          <CardBoxButton title="Submit" 
+            text={"Reciept"}
+            bgcolor={Color.deepskyblue}
+            textcolor={Color.white}
+            alignItems="flex-end"
+            width="40%"
+          />
+          </View>
+        </View>
+
         </View>
       </View>
 
-      {/* Second column */}
-      <View style={[styles.column1, { marginBottom: 10 }, { marginRight: 12 }, styles.spaceBetweenColumn]}>
-        <View style={styles.cell4}>
-        <Image style={[ StyleSheet.absoluteFill]} source={require(uri)} />
-        </View>
-        <View style={styles.cell3}>
-          <Text style={styles.cellText1}>JA1943</Text>
-        </View>
-      </View>
-    </View>
   );
 };
 
@@ -61,7 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 320,
     flexDirection: 'row', // To align columns side by side
-    marginLeft: 25,
+    marginLeft: 2,
     justifyContent: 'space-around',
     
     
@@ -69,7 +97,7 @@ const styles = StyleSheet.create({
   column0: {
     flex: 1,
     flexDirection: 'column',
-    marginBottom: 10,
+    marginBottom: 0,
 
   },
   column1: {
@@ -96,30 +124,31 @@ const styles = StyleSheet.create({
     height: 60,
     // borderWidth: 1,
     // borderColor: 'white',
-         alignItems: 'center',
-     justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
+    marginTop: 10,
+    
   },
   cell1: {
     width: 120,
     height: 35,
     //  borderWidth: 1,
-     alignItems: 'flex-start',
+    //  borderColor: 'white',
+     alignItems: 'fle',
      justifyContent: 'center',
-     marginLeft: 10,
+
   },
 
 
-  cellx: {
-    width: 25,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   cell2: {
     width: 120,
     height: 35,
     alignItems: 'flex-end',
     justifyContent: 'center',
-    marginRight: 15,
+    // borderWidth: 1,
+    // borderColor: 'white',
+
   
   },
 
@@ -128,6 +157,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 35,
     // borderWidth: 1,
+    // borderColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -135,6 +165,8 @@ const styles = StyleSheet.create({
     width: 80,
     height: 98,
     // borderWidth: 1,
+    // borderColor: 'white',
+
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -147,8 +179,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'white' ,
     fontFamily : 'Poppins-Regular' , 
-  },
 
+  },
+  cellText2: {
+    fontSize: 16,
+    color: 'white' ,
+    fontFamily : 'Poppins-Regular' , 
+  },
 });
 
-export default Flexbox;
+export default CardBox;

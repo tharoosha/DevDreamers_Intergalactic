@@ -13,7 +13,7 @@ import SeatBooking from "./screens/SeatBooking";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import TravelGuide from "./screens/TravelGuide";
-
+import MyBookings from "./screens/MyBooking";
 
 const theme = {
   ...DefaultTheme,
@@ -50,14 +50,14 @@ export default function App() {
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="TravelGuide"
+            initialRouteName="MyBookings"
           >
 
           
 
             <Stack.Screen
-              name="Search"
-              component={Search}
+              name="MyBookings"
+              component={MyBookings}
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
