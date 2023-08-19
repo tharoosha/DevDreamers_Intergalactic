@@ -1,3 +1,5 @@
+
+import Navigation from '../Intergalactic/navigation';
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native"
@@ -13,6 +15,7 @@ import SeatBooking from "./screens/SeatBooking"
 import SignUp from "./screens/SignUp"
 import SignIn from "./screens/SignIn"
 import TravelGuide from "./screens/TravelGuide"
+import Destinations from "./screens/Destination";
 
 
 const theme = {
@@ -43,33 +46,11 @@ export default function App() {
 
   return (
 
-    // <>
-    <NavigationContainer>
-      {hideSplashScreen ? (
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false
-          }}
-          initialRouteName="Home"
-        >
 
+    <>
+        <Navigation />
+    </>
+  );
 
-
-          <Stack.Screen
-            name="Search"
-            component={Search}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="SignUp" component={SignUp} />
-          <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="SeatBooking" component={SeatBooking} />
-          <Stack.Screen name="TravelGuide" component={TravelGuide} />
-
-        </Stack.Navigator>
-      ) : null}
-    </NavigationContainer>
-    // </>
-  )
 }
 

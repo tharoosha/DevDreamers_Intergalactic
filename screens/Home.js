@@ -10,6 +10,7 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 
 
 
+
 const Home = () => {
 
     const {height} = useWindowDimensions();
@@ -28,6 +29,7 @@ const Home = () => {
                 top: height * 0.1,
                 marginLeft: "27%",
                 fontSize: FontSize.size_9xl_1}]}>Welcome to Intergalactic</Text>
+            
             <View style={[styles.bottom, {top: height * 0.2}]}>
                 <View style={styles.login}>
                     <BlurView tint="default" intensity={15} >
