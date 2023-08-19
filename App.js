@@ -51,7 +51,7 @@ export default function App() {
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="TravelGuide"
+            initialRouteName="SeatBooking"
           >
 
           
