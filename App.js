@@ -8,12 +8,10 @@ import { Image } from "expo-image";
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
 import Home from "./screens/Home";
-// import Ticket from "./screens/Ticket";
-
 import Search from "./screens/Search";
 import SeatBooking from "./screens/SeatBooking";
-
-import TravelGuide from "./screens/TravelGuide";
+import SignUp from "./screens/SignUp";
+import SignIn from "./screens/SignIn";
 
 
 const theme = {
@@ -51,18 +49,21 @@ export default function App() {
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="SeatBooking"
+            initialRouteName="SignUp"
           >
 
           
 
             <Stack.Screen
-              name="Seat Booking"
-              component={SeatBooking}
+              name="Search"
+              component={Search}
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="TravelGuide" component={TravelGuide} />
+            <Stack.Screen name="SignUp" component={SignUp} />
+            <Stack.Screen name="SignIn" component={SignIn} />
+            <Stack.Screen name="SeatBooking" component={SeatBooking} />
+
           </Stack.Navigator>
         ) : null}
       </NavigationContainer>
