@@ -7,9 +7,9 @@ import { useFonts } from 'expo-font';
 
 import Home from "./screens/Home";
 // import Ticket from "./screens/Ticket";
-
 import Search from "./screens/Search";
-
+import SignUp from "./screens/SignUp";
+import SignIn from "./screens/SignIn"
 
 const theme = {
   ...DefaultTheme,
@@ -46,7 +46,7 @@ export default function App() {
             screenOptions={{ 
               headerShown: false 
             }}
-            initialRouteName="Home"
+            initialRouteName="SignUp"
           >
 
             <Stack.Screen
@@ -55,6 +55,9 @@ export default function App() {
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="SignUp" component={SignUp} />
+            <Stack.Screen name="SignIn" component={SignIn} />
+
           </Stack.Navigator>
         ) : null}
       </NavigationContainer>
