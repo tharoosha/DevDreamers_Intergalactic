@@ -54,9 +54,9 @@ export default function App() {
           >
 
             <Stack.Screen
-              name="Seat Booking"
+              name="Travel Guide"
               component={SeatBooking}
-              options={{ headerShown: true }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
           </Stack.Navigator>

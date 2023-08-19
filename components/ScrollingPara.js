@@ -18,7 +18,7 @@ const ScrollingParagraphs = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* <PhotoGrid/> */}
+      <PhotoGrid/>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Valora Crater</Text>
       </View>
