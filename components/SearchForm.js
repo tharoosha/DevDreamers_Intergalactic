@@ -69,6 +69,7 @@ const SearchForm = () => {
           onChangeText={(text) => setName(text)}
           width={314}
           label={"From"}
+          secureTextEntry={false}
         />
         <Input
           placeholder={"Email"}
@@ -76,6 +77,7 @@ const SearchForm = () => {
           onChangeText={(text) => setEmail(text)}
           width={314}
           label={"To"}
+          secureTextEntry={false}
         />
         <View style={styles.row}>
           <View style={styles.DateTimeContainer}>
@@ -128,25 +130,30 @@ const SearchForm = () => {
               onChangeText={(text) => setMode(text)}
               width={145}
               label={"Mode"}
+              secureTextEntry={false}
             />
           </View>
           
         </View>
         
-        <View style={styles.lineView} />
+        
+        <View style={{marginBottom: "8%"}}>
+          <View style={styles.lineView} />
 
-        <Button title="Submit" 
-          onPress={handleSubmit}
-          text={"Search Flight"}
-          bgcolor={Color.deepskyblue}
-          textcolor={Color.white}
-        />
-        <Button title="Submit" 
-          onPress={handleSubmit}
-          text={"Compair Places"}
-          bgcolor={Color.white}
-          textcolor={Color.deepskyblue}
-        />
+          <Button title="Submit" 
+            onPress={handleSubmit}
+            text={"Search Flight"}
+            bgcolor={Color.deepskyblue}
+            textcolor={Color.white}
+          />
+          <Button title="Submit" 
+            onPress={handleSubmit}
+            text={"Compair Places"}
+            bgcolor={Color.white}
+            textcolor={Color.deepskyblue}
+          />
+        </View>
+        
       </View>
     // </SafeAreaView>
   )
@@ -155,6 +162,7 @@ const SearchForm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection:"column",
     paddingHorizontal: 21,
     justifyContent: 'center',
   },
@@ -165,16 +173,17 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: 2,
-    marginTop: 70,
+    marginBottom: "2%",
   },
   row: {
     flex: 1,
     flexDirection: "row",
-    alignContent: 'center',
+    // alignItems: "center"
   },
   inputWrap: {
     flex: 1,
-    alignContent: 'center',
+    // alignContent: 'center',
+    marginTop:"1%",
     marginLeft: 5
   },
   DateTimeContainer:{
@@ -190,7 +199,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: 80,
     height: 13,
-    margin: 7,
+    margin: 5,
     paddingLeft: 10
   },
   searchWrapper:{
@@ -205,7 +214,7 @@ const styles = StyleSheet.create({
     fontFamily: FontSize.poppinsRegular,
     color: "#fff",
     paddingLeft: 17,
-    marginBottom: 5,
+    // marginBottom: 5,
     alignItems: "center", 
   },
   searchInput:{
