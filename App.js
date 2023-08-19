@@ -12,6 +12,7 @@ import Search from "./screens/Search";
 import SeatBooking from "./screens/SeatBooking";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
+import TravelGuide from "./screens/TravelGuide";
 
 
 const theme = {
@@ -49,7 +50,7 @@ export default function App() {
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="SignUp"
+            initialRouteName="TravelGuide"
           >
 
           
@@ -63,6 +64,7 @@ export default function App() {
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="SeatBooking" component={SeatBooking} />
+            <Stack.Screen name="TravelGuide" component={TravelGuide} />
 
           </Stack.Navigator>
         ) : null}
