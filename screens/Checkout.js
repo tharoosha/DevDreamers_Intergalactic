@@ -20,7 +20,14 @@ const Checkout = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} />
+          <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={require(uri)} />
+          <LinearGradient style={styles.rectangleLineargradient} locations={[0, 1]} colors={['rgba(4, 8, 19, 0.89)', '#000']} useAngle={true} angle={180} />
+          <LinearGradient
+              // Background Linear Gradient
+              colors={['rgba(4, 8, 19, 0.89)','#000']}
+              style={styles.rectangleLineargradient}
+            />
+      <BlurView tint="default" intensity={15} >
       <Invoice style={styles.invoice} promoCode={promoCode} setPromoCode={setPromoCode} />
 
       <View style={styles.button}>
@@ -34,6 +41,7 @@ const Checkout = () => {
           onPress={handleButtonPress}
         />
       </View>
+      </BlurView>
     </View>
   );
 };
