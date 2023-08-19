@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
+
+
 // import {Button, Input} from '../components'
 // import moment from 'moment';
 import Button from './Button';
@@ -59,6 +61,7 @@ const SearchForm = () => {
     hideDatePicker();
   };
 
+
   return (
     // <SafeAreaView style={styles.container}>
 
@@ -78,6 +81,7 @@ const SearchForm = () => {
           label={"To"}
         />
         <View style={styles.row}>
+
           <View style={styles.DateTimeContainer}>
             <Text style={styles.input_text}>Date</Text>
             {/* <Input
@@ -120,6 +124,7 @@ const SearchForm = () => {
             />
             
               
+
           </View>
           <View style={styles.inputWrap}>
             <Input
@@ -132,6 +137,7 @@ const SearchForm = () => {
           </View>
           
         </View>
+
         <View style={{marginBottom: "10%"}}>
           <View style={styles.lineView} />
 
@@ -148,7 +154,7 @@ const SearchForm = () => {
             textcolor={Color.deepskyblue}
           />
         </View>
-        
+
       </View>
     // </SafeAreaView>
   )
@@ -167,7 +173,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: 2,
+
     // marginTop: 70,
+
   },
   row: {
     flex: 1,
@@ -177,6 +185,7 @@ const styles = StyleSheet.create({
   inputWrap: {
     flex: 1,
     alignContent: 'center',
+
     marginLeft: 5
   },
   DateTimeContainer:{
@@ -219,6 +228,7 @@ const styles = StyleSheet.create({
     // marginLeft: 1.2
     width: 40
   }
+
 });
 
 export default SearchForm;

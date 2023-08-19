@@ -1,16 +1,22 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet,Image, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
+import { StyleSheet, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
+import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from 'expo-linear-gradient';
+import Button from "../components/Button";
 
 
-// const uri = 'https://ak.picdn.net/shutterstock/videos/1060308725/thumb/1.jpg'
-const uri = '/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png'
+import SeatSetup from "../components/SeatSetup";
+import Flexbox from "../components/Layout";
+
+
+//const uri = "https://drive.google.com/file/d/18HintxbTmj9eBv5pLQezpN-b4ru3G--X/view?usp=drive_link" ;
+const uri = '..//assets/images/Shadow_Realm_resize.png'
 // import { LinearGradient } from "expo-linear-gradient";
-// import { Image } from "expo-image";
+
 
 
 const SeatBooking = () => {
@@ -18,7 +24,7 @@ const SeatBooking = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} />
+      {/* <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} /> */}
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
@@ -26,35 +32,38 @@ const SeatBooking = () => {
         style={styles.rectangleLineargradient}
       />
 
-        <View contentContainerStyle= {{
-          flex: 1,
-          width: '100%',
-          height: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}> 
+      <View contentContainerStyle= {{
+          // flex: 1,
+          // width: '100%',
+          // height: '100%',
+          // alignItems: 'center',
+          // justifyContent: 'center',
+      }}> 
         <View style={styles.flightDetails}>
           <BlurView tint="default" intensity={15} >
-          
+            <Flexbox />
           </BlurView>
         </View>
-           
+
       </View>
 
-      <ScrollView contentContainerStyle= {{
+      <View contentContainerStyle= {{
           flex: 1,
           width: '100%',
           height: '100%',
           alignItems: 'center',
           justifyContent: 'center',
         }}> 
-        <View style={styles.login}>
+        <View style={styles.login }>
           <BlurView tint="default" intensity={15} >
-
+            <SeatSetup />
           </BlurView>
+
+
         </View>
-           
-      </ScrollView>
+
+      </View>
+
     </View>
   );
 };
@@ -62,9 +71,9 @@ const SeatBooking = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+
   },
   image: {
     width: '100%',
@@ -80,10 +89,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden", 
+    marginBottom: 10,
+    marginTop: 60,
   },
   login: {
     width: 352,
-    height: 397,
+    height: 367,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
