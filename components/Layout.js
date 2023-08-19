@@ -1,8 +1,13 @@
 import React from 'react';
 import {Font ,  View, Text, StyleSheet } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
+import { Image } from "expo-image";
+
 
 const Flexbox = () => {
+
+  const uri = '../assets/icons/Spaceships/SpaceX.svg'
+
   return (
     <View style={styles.container}>
       {/* First column */}
@@ -41,9 +46,7 @@ const Flexbox = () => {
       {/* Second column */}
       <View style={[styles.column1, { marginBottom: 10 }, { marginRight: 12 }, styles.spaceBetweenColumn]}>
         <View style={styles.cell4}>
-          <Svg height="100" width="100">
-            <Circle cx="50" cy="50" r="40" stroke="white" strokeWidth="3" fill="white" />
-          </Svg>
+        <Image style={[ StyleSheet.absoluteFill]} source={require(uri)} />
         </View>
         <View style={styles.cell3}>
           <Text style={styles.cellText1}>JA1943</Text>
@@ -145,6 +148,7 @@ const styles = StyleSheet.create({
     color: 'white' ,
     fontFamily : 'Poppins-Regular' , 
   },
+
 });
 
 export default Flexbox;

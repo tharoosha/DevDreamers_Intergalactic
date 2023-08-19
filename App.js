@@ -2,6 +2,8 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from 'expo-font';
+import { Image } from "expo-image";
+
 
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
@@ -53,8 +55,10 @@ export default function App() {
             initialRouteName="Search"
           >
 
+          
+
             <Stack.Screen
-              name="Travel Guide"
+              name="Seat Booking"
               component={SeatBooking}
               options={{ headerShown: false }}
             />
