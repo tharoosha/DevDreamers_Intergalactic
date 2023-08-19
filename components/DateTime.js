@@ -109,12 +109,15 @@
 // export default DateTime;
 
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, useColorScheme } from 'react-native';
 import { Color, FontSize } from "../constants/GlobalStyles";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Feather } from '@expo/vector-icons';
 
 const DateTime = () => {
+    const colorScheme = useColorScheme();
+    const isDarkMode = colorScheme === 'dark';
+    
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
@@ -135,17 +138,17 @@ const DateTime = () => {
 
     return (
         <View>
-            <Text style={styles.input_text}>Date</Text>
+            <Text style={[styles.input_text, { color: isDarkMode ? 'white' : 'black' }]}>Date</Text>
             <View style={styles.input}>
                 <TouchableOpacity onPress={showDatePicker} style={styles.inputField}>
                     <TextInput
-                        style={styles.dateText}
+                        style={[styles.dateText, { color: isDarkMode ? 'white' : Color.darkBG }]}
                         placeholder="Select Date"
-                        placeholderTextColor={Color.white}
+                        placeholderTextColor={Color.darkBG}
                         value={selectedDate.toLocaleDateString('en-GB')}
                         editable={false} // Prevent manual input
                     />                   
-                    <Feather name="calendar" size={24} color={Color.white} style={styles.calendarIcon} />
+                    <Feather name="calendar" size={24} color={Color.darkBG} style={styles.calendarIcon} />
 
                 </TouchableOpacity>
                 {isDatePickerVisible && (
@@ -162,6 +165,7 @@ const DateTime = () => {
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     input_text: {

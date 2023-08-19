@@ -1,11 +1,10 @@
-import { View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
+import {isDarkMode, View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 // import {Button, Input} from '../components'
 // import moment from 'moment';
 import Button from './Button';
 import Input from './Input';
-
 // import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePicker from "react-native-modal-datetime-picker";
 
@@ -109,15 +108,20 @@ const SearchForm = () => {
 
             
             
-            <DateTimePicker
-                isVisible = {isDatePickerVisible}
-                mode="date"
-                // is24Hour={true}
-                // display="default"
-                // onChange={(event, date) => handleConfirm(date)}
-                onConfirm={handleConfirm}
-                onCancel={hideDatePicker}
-            />
+            {isDatePickerVisible && (
+                <DateTimePicker
+                    isVisible={true}
+                    mode="date"
+                    // is24Hour={true}
+                    // display="default"
+                    // onChange={(event, date) => handleConfirm(date)}
+                    onConfirm={handleConfirm}
+                    onCancel={hideDatePicker}
+                    isDarkModeEnabled={isDarkMode} // Use isDarkMode here
+                    textColor={isDarkMode ? 'white' : 'black'} // Adjust text color based on dark mode
+                    backgroundColor={isDarkMode ? 'black' : 'white'} // Adjust background color based on dark mode
+                />
+            )}
             
               
           </View>
