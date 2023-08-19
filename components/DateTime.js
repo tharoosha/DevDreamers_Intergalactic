@@ -1,3 +1,4 @@
+
 // import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native'
 // import { useState, React } from 'react'
 // import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
@@ -10,9 +11,11 @@
 
 // const DateTime = () => {
 
+
 //     const [mydate, setDate] = useState(new Date());
 //     const [displaymode, setMode] = useState('date');
 //     const [isDisplayDate, setShow] = useState(false);
+
 
 //     const changeSelectedDate = (event, selectedDate) => {
 //         const currentDate = selectedDate || mydate;
@@ -203,5 +206,6 @@ const styles = StyleSheet.create({
 });
 
 export default DateTime;
+
 
 

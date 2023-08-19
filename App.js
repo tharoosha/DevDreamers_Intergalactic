@@ -8,8 +8,10 @@ import { useFonts } from 'expo-font';
 import Home from "./screens/Home";
 // import Ticket from "./screens/Ticket";
 import Search from "./screens/Search";
+
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn"
+
 
 const theme = {
   ...DefaultTheme,
@@ -50,9 +52,9 @@ export default function App() {
           >
 
             <Stack.Screen
-              name="Search"
-              component={Search}
-              options={{ headerShown: false }}
+              name="Seat Booking"
+              component={SeatBooking}
+              options={{ headerShown: true }}
             />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="SignUp" component={SignUp} />

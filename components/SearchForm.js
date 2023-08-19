@@ -59,8 +59,7 @@ const SearchForm = () => {
     hideDatePicker();
   };
 
-  return (
-    // <SafeAreaView style={styles.container}>
+return (
 
       <View style={styles.container}>
         <Input
@@ -133,9 +132,6 @@ const SearchForm = () => {
               secureTextEntry={false}
             />
           </View>
-          
-        </View>
-        
         
         <View style={{marginBottom: "8%"}}>
           <View style={styles.lineView} />
@@ -228,4 +224,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SearchForm;
+// export default SearchForm;
