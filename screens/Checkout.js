@@ -8,7 +8,7 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 
 const screenHeight = Dimensions.get('window').height;
 
-const uri = '..//assets/images/Shadow_Realm_resize.png'
+const uri = require('..//assets/images/Shadow_Realm_resize.png');
 
 
 const Checkout = () => {
@@ -20,7 +20,7 @@ const Checkout = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} />
+      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={(uri)} />
       <Invoice style={styles.invoice} promoCode={promoCode} setPromoCode={setPromoCode} />
 
       <View style={styles.button}>

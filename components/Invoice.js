@@ -11,6 +11,8 @@ import {
 import { Color, FontFamily } from '../constants/GlobalStyles';
 import invoiceData from '../data/invoice_data.json';
 import promoCodesFile from '../data/promo_code.json';
+import { BlurView } from 'expo-blur';
+
 
 const MaxVisibleRows = 3;
 
@@ -40,11 +42,13 @@ const Invoice = ({ promoCode, setPromoCode }) => {
   const discountedTotal = (totalAmount -discount).toFixed(2);
 
   return (
+    
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       keyboardVerticalOffset={120}
     >
+      <BlurView tint="default" intensity={50} style={styles.blurOverlay} />
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <Text style={styles.text}>{invoiceData.airlineName}</Text>
         <View style={styles.horizontalLine} />
@@ -112,7 +116,9 @@ const Invoice = ({ promoCode, setPromoCode }) => {
           />
         </View>
       </ScrollView>
+      
     </KeyboardAvoidingView>
+    
   );
 };
 
@@ -120,6 +126,10 @@ const styles = StyleSheet.create({
   scrollViewContent: {
     flexGrow: 1,
     marginTop: 10,
+  },
+  blurContainer: {
+    borderRadius: 7,
+    overflow: 'hidden', // Ensure that the blur effect stays within the defined border
   },
 
   tableContainer: {
@@ -134,6 +144,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     padding: 10,
     marginTop: 40,
+    overflow: 'hidden'
   },
 
   horizontalLine: {
@@ -213,6 +224,11 @@ const styles = StyleSheet.create({
     width: 100,
     height: 25,
   },
+  blurOverlay: {
+    ...StyleSheet.absoluteFillObject, // Cover the entire container
+    borderRadius: 7,
+    overflow: 'hidden', // Ensure that the blur effect stays within the defined border
+  }
 });
 
 export default Invoice;
