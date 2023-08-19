@@ -7,12 +7,10 @@ import { useFonts } from 'expo-font';
 
 import Home from "./screens/Home";
 // import Ticket from "./screens/Ticket";
-
 import Search from "./screens/Search";
 
-import SeatBooking from "./screens/SeatBooking";
-
-import TravelGuide from "./screens/TravelGuide";
+import SignUp from "./screens/SignUp";
+import SignIn from "./screens/SignIn"
 
 
 const theme = {
@@ -50,7 +48,7 @@ export default function App() {
             screenOptions={{ 
               headerShown: false 
             }}
-            initialRouteName="Search"
+            initialRouteName="SignUp"
           >
 
             <Stack.Screen
@@ -59,6 +57,9 @@ export default function App() {
               options={{ headerShown: true }}
             />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="SignUp" component={SignUp} />
+            <Stack.Screen name="SignIn" component={SignIn} />
+
           </Stack.Navigator>
         ) : null}
       </NavigationContainer>

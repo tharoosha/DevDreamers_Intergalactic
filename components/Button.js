@@ -9,23 +9,19 @@ const Button = ({text, onPress, bgcolor, textcolor, ...props }) => {
     <TouchableOpacity
       style={{
         backgroundColor: bgcolor,
-        // padding: 13,
+        padding: 10,
         borderRadius: 44,
         height: 44,
         width: 312,
-        marginBottom: 14}}
+        alignItems: "center",
+        marginTop: "5%"}}
       onPress={onPress}
     >
       <Text
         style={{
           fontFamily: FontFamily.poppinsBold,
-          top: 15,
-          left: 95,
-          position: "absolute",
           fontSize: FontSize.size_base, 
-          lineHeight: 18,
           color: textcolor,
-          textAlign: "left"
         }}
       >
         {text}
