@@ -47,7 +47,7 @@ const SeatBooking = () => {
 
       </View>
 
-      <ScrollView contentContainerStyle= {{
+      <View contentContainerStyle= {{
           flex: 1,
           width: '100%',
           height: '100%',
@@ -62,7 +62,7 @@ const SeatBooking = () => {
 
         </View>
 
-      </ScrollView>
+      </View>
 
     </View>
   );
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+
   },
   image: {
     width: '100%',
@@ -89,6 +89,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden", 
+    marginBottom: 10,
+    marginTop: 60,
   },
   login: {
     width: 352,
