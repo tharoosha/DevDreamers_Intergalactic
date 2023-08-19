@@ -11,7 +11,6 @@ import Home from "./screens/Home";
 // import Ticket from "./screens/Ticket";
 
 import Search from "./screens/Search";
-
 import SeatBooking from "./screens/SeatBooking";
 
 import TravelGuide from "./screens/TravelGuide";
@@ -50,9 +49,9 @@ export default function App() {
         {hideSplashScreen ? (
           <Stack.Navigator 
             screenOptions={{ 
-              headerShown: false 
+              headerShown: false
             }}
-            initialRouteName="Search"
+            initialRouteName="TravelGuide"
           >
 
           
@@ -63,6 +62,7 @@ export default function App() {
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="TravelGuide" component={TravelGuide} />
           </Stack.Navigator>
         ) : null}
       </NavigationContainer>

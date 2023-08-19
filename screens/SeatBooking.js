@@ -7,7 +7,7 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from "../components/Button";
-import { Image } from "expo-image";
+
 
 import SeatSetup from "../components/SeatSetup";
 import Flexbox from "../components/Layout";
@@ -24,21 +24,21 @@ const SeatBooking = () => {
 
   return (
     <View style={styles.container}>
-    <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={require(uri)} />
-    <LinearGradient style={styles.rectangleLineargradient} locations={[0, 1]} colors={['rgba(4, 8, 19, 0.89)', '#000']} useAngle={true} angle={180} />
-    <LinearGradient
+      {/* <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} /> */}
+      {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
+      <LinearGradient
         // Background Linear Gradient
         colors={['rgba(4, 8, 19, 0.89)','#000']}
         style={styles.rectangleLineargradient}
       />
 
-        <View contentContainerStyle= {{
-          flex: 1,
-          width: '100%',
-          height: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}> 
+      <View contentContainerStyle= {{
+          // flex: 1,
+          // width: '100%',
+          // height: '100%',
+          // alignItems: 'center',
+          // justifyContent: 'center',
+      }}> 
         <View style={styles.flightDetails}>
           <BlurView tint="default" intensity={15} >
             <Flexbox />
