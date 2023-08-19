@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from 'expo-font';
 import { Image } from "expo-image";
-
+import Navigation from '../Intergalactic/navigation';
 
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
@@ -13,6 +13,10 @@ import SeatBooking from "./screens/SeatBooking";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import TravelGuide from "./screens/TravelGuide";
+import Destinations from "./screens/Destination";
+import MainContainer from "./screens/MainContainer";
+import TabBar from "./navigation/tabBar";
+// import InvoiceRecipt from "./screens/InvoiceReceipt";
 
 
 const theme = {
@@ -43,18 +47,16 @@ export default function App() {
 
   return (
 
-    // <>
-      <NavigationContainer>
-        {hideSplashScreen ? (
+    <>
+      {/* <NavigationContainer> */}
+        {/* {hideSplashScreen ? (
           <Stack.Navigator 
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="TravelGuide"
-          >
+          > */}
 
-          
-
+{/*           
             <Stack.Screen
               name="Search"
               component={Search}
@@ -65,23 +67,16 @@ export default function App() {
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="SeatBooking" component={SeatBooking} />
             <Stack.Screen name="TravelGuide" component={TravelGuide} />
+            <Stack.Screen name="Destination" component={Destinations} />
+            {/* <Stack.Screen name="InvoiceReceipt" component={InvoiceRecipt} /> */}
 
-          </Stack.Navigator>
-        ) : null}
-      </NavigationContainer>
-    // </>
-
-    // <NavigationContainer >
-    //   <Stack.Navigator
-    //     screenOptions={{
-    //       headerShown: false,
-    //     }}
-    //     initialRouteName="Home"
-    //   >
-    //     <Stack.Screen name="Home" component={Home} />
-    //     <Stack.Screen name="Ticket" component={Ticket} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
+          {/* </Stack.Navigator> */}
+         {/* : null  */}
+        {/* <MainContainer /> */}
+        {/* <TabBar /> */}
+        <Navigation />
+      {/* </NavigationContainer> */}
+    </>
   );
 }
 

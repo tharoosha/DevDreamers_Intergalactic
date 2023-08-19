@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
+import { StyleSheet,Image, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
@@ -14,8 +14,9 @@ import Flexbox from "../components/Layout";
 
 
 //const uri = "https://drive.google.com/file/d/18HintxbTmj9eBv5pLQezpN-b4ru3G--X/view?usp=drive_link" ;
-const uri = '..//assets/images/Shadow_Realm_resize.png'
+// const uri = '..//assets/images/Shadow_Realm_resize.png'
 // import { LinearGradient } from "expo-linear-gradient";
+import bg from "../assets/images/Shadow_Realm_resize.png"
 
 
 
@@ -24,7 +25,7 @@ const SeatBooking = () => {
 
   return (
     <View style={styles.container}>
-      {/* <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} /> */}
+      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={bg} />
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
