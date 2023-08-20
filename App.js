@@ -50,14 +50,14 @@ export default function App() {
             screenOptions={{ 
               headerShown: false
             }}
-            initialRouteName="MyBookings"
+            initialRouteName="SeatBooking"
           >
 
           
 
             <Stack.Screen
-              name="MyBookings"
-              component={MyBookings}
+              name="SeatBooking"
+              component={SeatBooking}
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Home" component={Home} />
