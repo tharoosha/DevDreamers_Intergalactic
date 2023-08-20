@@ -27,10 +27,10 @@ const Checkout = () => {
         <Button
           title="proceed"
           text={"Proceed"}
-          textcolor={'rgba(255, 216, 230, 0.8)'}
-          bgcolor={'rgba(144, 213, 236,0.9)'}
+          textcolor={'white'}
+          bgcolor={'deepskyblue'}
           width={120}
-          height={44}
+          height={40}
           onPress={handleButtonPress}
         />
       </View>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     justifyContent: 'center',
-    padding: 10,
+    padding: 20,
   },
   image: {
     width: '100%',

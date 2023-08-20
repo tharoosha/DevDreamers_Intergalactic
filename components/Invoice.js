@@ -68,7 +68,6 @@ const Invoice = ({ promoCode, setPromoCode }) => {
           ]}
         >
           <Text style={styles.table.cell}>Flight No.</Text>
-          <Text style={styles.table.cell}>Seat ID</Text>
           <Text style={styles.table.cell}>Class</Text>
           <Text style={styles.table.cell}>Price</Text>
         </View>
@@ -78,7 +77,6 @@ const Invoice = ({ promoCode, setPromoCode }) => {
             <React.Fragment key={index}>
               <View style={styles.table.tableRow}>
                 <Text style={styles.table.subcell}>{seat.flightNo}</Text>
-                <Text style={styles.table.subcell}>{seat.seatID}</Text>
                 <Text style={styles.table.subcell}>{seat.class}</Text>
                 <Text style={styles.table.subcell}>{'$'+seat.price}</Text>
               </View>
@@ -209,7 +207,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     marginBottom: 10,
-    color: 'rgba(255, 255, 255, 0.7)',
+    color: 'white',
   },
 
   inputCell: {
@@ -217,7 +215,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 10,
     color: 'white',
-    backgroundColor: 'rgba(255, 216, 230, 0.15)',
+    backgroundColor: 'deepskyblue',
     borderRadius: 10,
     padding: 5,
     textAlign: 'center',
