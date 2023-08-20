@@ -73,12 +73,7 @@ export default function App() {
     //   </Stack.Navigator>
     //   {/* <MainTabNavigator /> */}
     // </NavigationContainer>
-    <ImageBackground
-      source={require("./assets/images/background.png")}
-      style={{ width: "100%", height: "100%" }}
-    >
-      <Navigation />
-    </ImageBackground>
+    <Navigation />
   )
 
 }

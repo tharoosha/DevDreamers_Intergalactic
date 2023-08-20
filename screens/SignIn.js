@@ -17,12 +17,12 @@ import * as RootNavigation from '../navigation/RootNavigation'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles"
 import { CustomInput, Input, Button } from '../components'
 
-const SignIn = () => {
+const SignIn = ({ navigation }) => {
   const { height } = useWindowDimensions()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const navigation = useNavigation()
+  // const navigation = useNavigation()
 
 
   const handleSubmit = () => {
@@ -30,7 +30,7 @@ const SignIn = () => {
     // console.log('Password:', password); 
 
     //validation part
-    RootNavigation.navigate("main")
+    navigation.navigate("main")
     // navigation.navigate("Home")
 
   }
