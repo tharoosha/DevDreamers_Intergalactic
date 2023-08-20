@@ -1,0 +1,37 @@
+{
+    "flights": [
+      {
+        "airlineName": "Jetwing Airlines",
+        "date": "2023-08-11",
+        "from": "BIA",
+        "departureTime": "12:30 PM",
+        "to": "MX100 Region Mars",
+        "classesAvailable": ["Economy", "Business", "First"]
+      },
+      {
+        "airlineName": "Skyline Airways",
+        "date": "2023-08-15",
+        "from": "JFK",
+        "departureTime": "10:00 AM",
+        "to": "LAX",
+        "classesAvailable": ["Economy", "Premium", "First"]
+      },
+      {
+        "airlineName": "Oceanic Flights",
+        "date": "2023-08-20",
+        "from": "LHR",
+        "departureTime": "3:45 PM",
+        "to": "SYD",
+        "classesAvailable": ["Economy", "Business"]
+      },
+      {
+        "airlineName": "Jetwing Airlines",
+        "date": "2023-08-11",
+        "from": "BIA",
+        "departureTime": "12:30 PM",
+        "to": "MX100 Region Mars",
+        "classesAvailable": ["Economy", "Business", "First"]
+      }
+
+    ]
+  }

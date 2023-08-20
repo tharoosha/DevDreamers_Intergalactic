@@ -12,6 +12,8 @@ import Search from "./screens/Search";
 
 import Checkout from "./screens/Checkout";
 
+import SearchResult from "./screens/SearchResults";
+
 
 
 const theme = {
@@ -70,7 +72,7 @@ export default function App() {
         }}
         initialRouteName="Ticket"
       >
-        <Stack.Screen name="Checkout" component={Checkout} />
+        <Stack.Screen name="SearchResult" component={SearchResult} />
         
       </Stack.Navigator>
     </NavigationContainer>

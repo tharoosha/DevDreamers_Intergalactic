@@ -3,7 +3,7 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import React from 'react'
 
 // const Button = ({ minWidth, fontSize, handlePress, ...props }) => {
-const Button = ({text, onPress, bgcolor, textcolor,height,width, ...props }) => {
+const Button = ({text, onPress, bgcolor, textcolor,height,width,fontSize, ...props }) => {
 
   return (
     <TouchableOpacity
@@ -21,7 +21,7 @@ const Button = ({text, onPress, bgcolor, textcolor,height,width, ...props }) => 
       <Text
         style={{
           fontFamily: FontFamily.poppinsSemiBold,
-          fontSize: FontSize.size_base,
+          fontSize: FontSize.size_base || fontSize,
           lineHeight: 18,
           color: textcolor, 
         }}
