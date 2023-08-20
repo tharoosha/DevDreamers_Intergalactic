@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
   },
   login: {
     width: 342,
-    height: 600,
+    height: 620,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden",
-    marginTop: 150,
+    marginTop: 30,
 
   },
   rectangleLineargradient: {

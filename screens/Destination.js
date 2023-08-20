@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   },
   login: {
     width: "92%",
-    height: "70%",
+    height: "82%",
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     overflow: "hidden",
     left: "4%",
-    marginTop: 150,
+    marginTop: 30,
 
   },
 })

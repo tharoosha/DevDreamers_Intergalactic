@@ -60,13 +60,14 @@ const styles = StyleSheet.create({
   },
   login: {
     width: 356,
-    height: 677,
+    height: 620,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden",
+    marginTop: 10,
   },
   rectangleLineargradient: {
     top: 519,
