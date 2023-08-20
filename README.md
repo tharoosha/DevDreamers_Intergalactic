@@ -22,3 +22,6 @@ npm install
 npm start
 ```
 
+
+4. The backend is inside the backend folder.
+
