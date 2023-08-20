@@ -32,7 +32,7 @@ const SearchForm = () => {
     console.log('Email:', email);
     console.log('Date:', date);
     console.log('Mode',mode);
-    navigation.navigate('bookings')
+    navigation.navigate('Seatbookings')
 
   };
 
