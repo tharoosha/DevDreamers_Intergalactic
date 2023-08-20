@@ -174,7 +174,7 @@ const SearchForm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 21,
+    paddingHorizontal: 10,
     justifyContent: 'center',
   },
   lineView: {

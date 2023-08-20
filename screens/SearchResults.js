@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     alignItems: 'center',
-    paddingVertical: 20,
+    paddingVertical: 10,
     // marginTop:400,
     height: 2000,
 
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    alignItems: 'flex-end',
+    alignItems: 'center',
     marginTop: 5
   },
   rowContainer: {
@@ -157,14 +157,14 @@ const styles = StyleSheet.create({
   },
 
   rowText1: {
-    fontSize: 13,
+    fontSize: 16,
     borderColor: 'rgba(173, 216, 230, 0.3)',
     fontFamily: FontFamily.poppinsRegular,
     marginVertical: 0,
     color: 'white',
   },
   rowText2: {
-    fontSize: 11,
+    fontSize: 14,
     borderColor: 'rgba(173, 216, 230, 0.3)',
     fontFamily: FontFamily.poppinsRegular,
     marginVertical: 0,
