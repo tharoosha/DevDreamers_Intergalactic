@@ -45,7 +45,7 @@ const CardBox = ({ dateofp, price, airlines, dateoftravel,from,time,to,numberofS
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText2}>from {from}</Text>
+            <Text numberOfLines={1} ellipsizeMode="tail" style={styles.cellText3}>from {from}</Text>
           </View>
         </View>
 
@@ -55,7 +55,7 @@ const CardBox = ({ dateofp, price, airlines, dateoftravel,from,time,to,numberofS
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText2}>to {to}</Text>
+            <Text numberOfLines={1} ellipsizeMode="tail" style={styles.cellText3}>to {to}</Text>
           </View>
         </View>
 
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
 
 
   cell2: {
-    width: 120,
+    width: 140,
     height: 35,
     alignItems: 'flex-end',
     justifyContent: 'center',
@@ -199,6 +199,12 @@ const styles = StyleSheet.create({
   },
   cellText2: {
     fontSize: 16,
+    color: 'white' ,
+    fontFamily : 'Poppins-Regular' , 
+  },
+
+  cellText3: {
+    fontSize: 13,
     color: 'white' ,
     fontFamily : 'Poppins-Regular' , 
   },

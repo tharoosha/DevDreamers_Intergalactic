@@ -218,8 +218,8 @@ const styles = StyleSheet.create(
                 alignItems: 'center',
             },
             profileImage: {
-                width: 85, // Adjust the size of the profile image
-                height: 90, // Adjust the size of the profile image
+                width: 92, // Adjust the size of the profile image
+                height: 92, // Adjust the size of the profile image
                 borderRadius: 40, // Make it a circle by setting half of width/height as borderRadius
             },
     }

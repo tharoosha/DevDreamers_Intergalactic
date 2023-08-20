@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import {
   StyleSheet,
   View,
@@ -7,13 +7,13 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
-} from "react-native";
-import TravelGuide from "./TravelGuide";
-import { useNavigation } from '@react-navigation/native';
-import { BlurView } from 'expo-blur';
+} from "react-native"
+import TravelGuide from "./TravelGuide"
+import { useNavigation } from '@react-navigation/native'
+import { BlurView } from 'expo-blur'
 
 
-// import img from "/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image 4 (1).png"
+// import img from "../assets/images/planet/image 4 (1).png"
 
 const planetCardProps = [
   {
@@ -64,87 +64,87 @@ const planetCardProps = [
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
-];
+]
 
 
 
 const PlanetContainer = ({
-    image_path,
-    locationDescription,
-    voyageDescription,
-  }) => {
+  image_path,
+  locationDescription,
+  voyageDescription,
+}) => {
 
 
-    const navigation = useNavigation();
-    const handler = () => {
-      navigation.navigate('TravelGuide')
-    }
+  const navigation = useNavigation()
+  const handler = () => {
+    navigation.navigate('TravelGuide')
+  }
 
-    // console.log("PlanetContainer rendering:", locationDescription); // Debug log
-    return (
+  // console.log("PlanetContainer rendering:", locationDescription); // Debug log
+  return (
     <View >
-      
-        <TouchableOpacity  style={styles.destinations} 
-            onPress={handler}
-        >
-            {/* <View style={styles.destinations}> */}
-            <Image source={image_path} style={[styles.image, {width:"25%", height:"80%", marginHorizontal:"4%", top: "2%"}]} />
-            <View style={styles.textContainer}>
-                <Text style={{ color: "white", fontSize: 20 }}>
-                {locationDescription}
-                </Text>
-                <View style={{ alignContent: "center", width: "80%" }}>
-                <Text style={{ color: "white", fontSize: 15 }}>
-                    {voyageDescription}
-                </Text>
-                </View>
-            </View>
-            {/* </View> */}
-        </TouchableOpacity>
-       
+
+      <TouchableOpacity style={styles.destinations}
+        onPress={handler}
+      >
+        {/* <View style={styles.destinations}> */}
+        <Image source={image_path} style={[styles.image, { width: "25%", height: "80%", marginHorizontal: "4%", top: "2%" }]} />
+        <View style={styles.textContainer}>
+          <Text style={{ color: "white", fontSize: 20 }}>
+            {locationDescription}
+          </Text>
+          <View style={{ alignContent: "center", width: "80%" }}>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {voyageDescription}
+            </Text>
+          </View>
+        </View>
+        {/* </View> */}
+      </TouchableOpacity>
+
     </View>
-      
-    );
-  };
-  
-  const renderItem = ({ item }) => {
-    console.log("renderItem:", item.locationDescription); // Debug log
-    return <PlanetContainer {...item} />;
-  };
-  
+
+  )
+}
+
+const renderItem = ({ item }) => {
+  console.log("renderItem:", item.locationDescription) // Debug log
+  return <PlanetContainer {...item} />
+}
+
 const Destinations = () => {
-    console.log("Destinations rendering"); // Debug log
-    return (
-      
-          <ImageBackground
-            source={require("../assets/images/Shadow_Realm_resize.png")}
-            style={styles.backgroundImage}
-            resizeMode="cover"
-          >
-            
-            <View style={styles.login}>
-              <BlurView tint="default" intensity={15} >
+  console.log("Destinations rendering") // Debug log
+  return (
 
-                <View style={{paddingTop: 50}}>
-                  <FlatList
-                    data={planetCardProps}
-                    keyExtractor={(_, index) => index.toString()}
-                    renderItem={renderItem}
-                    ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
-                  />
-                </View>
-              </BlurView>
-            </View>
+    <ImageBackground
+      source={require("../assets/images/Shadow_Realm_resize.png")}
+      style={styles.backgroundImage}
+      resizeMode="cover"
+    >
 
-            {/* // <PlanetContainer {...planetCardProps[0]} />
+      <View style={styles.login}>
+        <BlurView tint="default" intensity={15} >
+
+          <View style={{ paddingTop: 50 }}>
+            <FlatList
+              data={planetCardProps}
+              keyExtractor={(_, index) => index.toString()}
+              renderItem={renderItem}
+              ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+            />
+          </View>
+        </BlurView>
+      </View>
+
+      {/* // <PlanetContainer {...planetCardProps[0]} />
             // <View style={{ height: 130 }} />
             // <PlanetContainer {...planetCardProps[1]} /> */}
 
 
-          </ImageBackground>
-        
-    );
-};
+    </ImageBackground>
+
+  )
+}
 
 const styles = StyleSheet.create({
   backgroundImage: {
@@ -155,8 +155,8 @@ const styles = StyleSheet.create({
   },
   destinations: {
     // position: "absolute",
-    width: "90%",
-    height:"80%",
+    width: "94%",
+    height: "80%",
     borderWidth: 1,
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderRadius: 30,
@@ -183,10 +183,10 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderRadius: 20,
     alignItems: 'center',
-    overflow: "hidden", 
-    top:"8%",
-    left:"4%"
+    overflow: "hidden",
+    top: "8%",
+    left: "4%"
   },
-});
+})
 
-export default Destinations;
+export default Destinations
