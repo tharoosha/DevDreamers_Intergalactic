@@ -17,7 +17,8 @@ import { BlurView } from 'expo-blur';
 const MaxVisibleRows = 3;
 
 const Invoice = ({ promoCode, setPromoCode }) => {
-  const handlePromoCodeChange = (value) => {
+  
+    const handlePromoCodeChange = (value) => {
     setPromoCode(value);
   };
 

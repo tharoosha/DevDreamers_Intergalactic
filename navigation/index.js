@@ -1,11 +1,11 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles"
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 
-import { navigationRef } from './RootNavigation'
+import { navigationRef } from './RootNavigation';
 
 import TabBar from '../navigation/tabBar'
 
@@ -17,12 +17,12 @@ import SeatBooking from '../screens/SeatBooking'
 // import Location from '../screens/Destination';
 // import Bookmarks from '../screens/TravelGuide';
 // import Settings from '../screens/demo';
-import Search from '../screens/Search'
-import TravelGuide from '../screens/TravelGuide'
-import Destinations from '../screens/Destination'
-import MyBookings from '../screens/MyBooking'
-import Checkout from "../screens/Checkout"
-import SignUp from '../screens/SignUp'
+import Register from "../screens/SignUp"
+import Search from '../screens/Search';
+import TravelGuide from '../screens/TravelGuide';
+import Destinations from '../screens/Destination';
+import MyBookings from '../screens/MyBooking';
+import Checkout from "../screens/Checkout";
 
 const Stack = createStackNavigator()
 
@@ -43,15 +43,15 @@ function Main() {
 };
 
 export default () => <NavigationContainer ref={navigationRef}>
-    <Stack.Navigator
+    <Stack.Navigator 
         initialRouteName="SignIn"
         screenOptions={{
             headerShown: false, // Hide the header bar for all screens
         }}
     >
-        <Stack.Screen name="SignIn" component={Login} />
-        <Stack.Screen name="main" component={Main} />
-        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="SignIn" component={Login}  />
+        <Stack.Screen name="main" component={Main} /> 
+        <Stack.Screen name="SignUp" component={Register} />
         <Stack.Screen name="TravelGuide" component={TravelGuide} />
         <Stack.Screen name="Seatbookings" component={SeatBooking} />
         <Stack.Screen name="Checkout" component={Checkout} />

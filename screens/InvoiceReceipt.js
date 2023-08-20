@@ -4,7 +4,10 @@ import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from "react
 import { LinearGradient } from "expo-linear-gradient";
 import { Border, Color, Padding, FontFamily, FontSize } from "../constants/GlobalStyles";
 
-const InvoiceRecipt = () => {
+
+const AirlineCategory = "jetwingAirlines";
+
+const InvoiceRecipt = (props) => {
   return (
     <View style={[styles.invoiceRecipt, styles.avatarIconLayout]}>
       <View style={styles.background}>
@@ -93,7 +96,7 @@ const InvoiceRecipt = () => {
           </View>
           <View style={[styles.frameView, styles.frameLayout]} />
           <View style={[styles.lineView, styles.frameChildBorder]} />
-          <Text style={styles.jetwingAirlines}>Jetwing Airlines</Text>
+          <Text style={styles.jetwingAirlines}>{{AirlineCategory}}</Text>
           <View style={[styles.frameChild1, styles.frameChildBorder]} />
           <View style={styles.seatbookingPageFlightDeta}>
             <Text style={[styles.fromBia, styles.text3Typo]}>FROM : BIA</Text>
@@ -187,11 +190,6 @@ const InvoiceRecipt = () => {
         />
       </View>
       <View style={[styles.frame4, styles.framePosition2]}>
-        <Image
-          style={styles.a770a6515b1e0ad75afe1Icon}
-          contentFit="cover"
-          source={require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Hello_1.png")}
-        />
       </View>
       <View style={[styles.frame5, styles.frameFlexBox]}>
         <Text style={[styles.dotedLine, styles.button1Typo]}>
