@@ -6,7 +6,6 @@ import CustomButton from './CustomButton'
 import { useNavigation } from '@react-navigation/native'
 
 // import NewButton from './NewButton';
-import { useNavigation } from '@react-navigation/native'
 
 
 const svgContent = `
