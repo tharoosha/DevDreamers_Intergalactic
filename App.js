@@ -55,11 +55,11 @@ export default function App() {
 
           
 
-            <Stack.Screen
+            {/* <Stack.Screen
               name="SeatBooking"
               component={SeatBooking}
               options={{ headerShown: false }}
-            />
+            /> */}
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="SignIn" component={SignIn} />

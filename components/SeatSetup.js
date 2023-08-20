@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {Text, StyleSheet,TouchableOpacity, View, Button, ScrollView } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import CustomButton from './CustomButton';
-import NewButton from './NewButton';
 
 
 const svgContent = `
@@ -108,9 +107,9 @@ const SeatSetup = () => {
       </ScrollView>
     </View>
     
-    <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
-        <CustomButton title="ATC" onPress={() => alert('ATC button tapped!')} />
-        <NewButton title="Proceed" onPress={() => alert('Proceed button tapped!')} />
+    <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 2 }}>
+        <CustomButton title="Add To Cart" bgcolor="white" textcolor="deepskyblue" onPress={() => alert('ATC button tapped!')} />
+        <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor="white" onPress={() => alert('ATC button tapped!')} />
       </View>
     </View>
   );

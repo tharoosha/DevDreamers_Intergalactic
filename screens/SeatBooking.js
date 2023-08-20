@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
+import { Image,StyleSheet, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
@@ -24,7 +24,7 @@ const SeatBooking = () => {
 
   return (
     <View style={styles.container}>
-      {/* <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={{uri}} /> */}
+      <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={require(uri)} />
       {/* <LinearGradient style={styles.rectangleLineargradient} locations={[0,1]} colors={['rgba(4, 8, 19, 0.89)','#000']} useAngle={true} angle={180} />; */}
       <LinearGradient
         // Background Linear Gradient
