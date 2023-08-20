@@ -56,7 +56,7 @@ const SearchResults = () => {
               height={40}
             />
 
-          <HorizontalLine color="white" height={2} opacity={0.5} bottommargin={20} />
+          <HorizontalLine color="white" height={2} opacity={0.5} bottommargin={5} />
           </View>
         </View>
       ))}
