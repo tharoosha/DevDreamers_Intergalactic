@@ -125,7 +125,7 @@ const Destinations = () => {
       <View style={styles.login}>
         <BlurView tint="default" intensity={15} >
 
-          <View style={{ paddingTop: 50 }}>
+          <View style={{ paddingTop: 5 }}>
             <FlatList
               data={planetCardProps}
               keyExtractor={(_, index) => index.toString()}
@@ -177,15 +177,16 @@ const styles = StyleSheet.create({
   },
   login: {
     width: "92%",
-    height: "80%",
+    height: "70%",
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden",
-    top: "8%",
-    left: "4%"
+    left: "4%",
+    marginTop: 150,
+
   },
 })
 

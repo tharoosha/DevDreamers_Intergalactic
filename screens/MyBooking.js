@@ -94,6 +94,7 @@ const MyBookings = () => {
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        
       }}>
         <View style={styles.login}>
           <BlurView tint="default" intensity={15} style={styles.blurView2}>
@@ -137,14 +138,14 @@ const styles = StyleSheet.create({
   },
   login: {
     width: 342,
-    height: 667,
+    height: 600,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden",
-    marginTop: 60,
+    marginTop: 150,
 
   },
   rectangleLineargradient: {
