@@ -153,15 +153,15 @@ const styles = StyleSheet.create(
             position: "absolute"
           },
         login: {
-            width: "82%",
-            height: "59%",
+            width: "85%",
+            height: "62%",
             borderColor: 'rgba(0, 178, 255, 0.5)',
             borderWidth: 1,
             borderStyle: 'solid',
             borderRadius: 20,
             alignItems: 'center',
             overflow: "hidden", 
-            marginLeft: "9%",
+            marginLeft: "8%",
             // marginTop: "1%"
             top:"32%"
         },
