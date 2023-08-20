@@ -27,11 +27,12 @@ const Checkout = () => {
         <Button
           title="proceed"
           text={"Proceed"}
-          textcolor={'white'}
-          bgcolor={'deepskyblue'}
+          textcolor={'rgba(255, 216, 230, 0.8)'}
+          bgcolor={'#00B2FF'}
           width={120}
           height={40}
           onPress={handleButtonPress}
+          style={styles.button}
         />
       </View>
     </View>
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
   },
   button: {
     top: 30,
+    right: "5%",
     alignItems: 'flex-end',
   },
 });

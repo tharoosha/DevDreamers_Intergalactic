@@ -48,7 +48,7 @@ const Invoice = ({ promoCode, setPromoCode }) => {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       keyboardVerticalOffset={120}
     >
-      <BlurView tint="default" intensity={50} style={styles.blurOverlay} />
+      <BlurView tint="default" intensity={15} style={styles.blurOverlay} />
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <Text style={styles.text}>{invoiceData.airlineName}</Text>
         <View style={styles.horizontalLine} />
@@ -124,9 +124,10 @@ const styles = StyleSheet.create({
   scrollViewContent: {
     flexGrow: 1,
     marginTop: 10,
+    height: "80%",
   },
   blurContainer: {
-    borderRadius: 7,
+    borderRadius: 44,
     overflow: 'hidden', // Ensure that the blur effect stays within the defined border
   },
 
@@ -136,12 +137,14 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    width: 350,
+    width: 380,
+    height: "65%",
     borderColor: 'rgba(173, 216, 230, 0.3)',
-    borderWidth: 0.75,
-    borderRadius: 7,
-    padding: 10,
+    borderWidth: 1,
+    borderRadius: 40,
+    padding: 30,
     marginTop: 40,
+    marginHorizontal:"4%",
     overflow: 'hidden'
   },
 
