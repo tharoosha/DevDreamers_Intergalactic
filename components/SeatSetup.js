@@ -39,7 +39,7 @@ const SeatSetup = () => {
   }
 
   const handleSubmit2 = () => {
-    navigation.navigate('InvoiceReceipt')
+    navigation.navigate('Checkout')
   }
 
   const [currentTab, setCurrentTab] = useState(0)

@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 
 const screenHeight = Dimensions.get('window').height;
+// import { useNavigation } from '@react-navigation/native'
 
 
 const uri = require('..//assets/images/Shadow_Realm_resize.png');
@@ -14,9 +15,12 @@ const uri = require('..//assets/images/Shadow_Realm_resize.png');
 
 const Checkout = () => {
   const [promoCode, setPromoCode] = useState('');
+  const navigation = useNavigation()
+
 
   const handleButtonPress = () => {
     console.log('Promo Code:', promoCode);
+    navigation.navigate('InvoiceReceipt')
   };
 
   return (

@@ -121,7 +121,7 @@ export default () => <NavigationContainer ref={navigationRef}>
         <Stack.Screen name="Checkout" component={Checkout} options={{
                 headerShown: true,
                 title: "Checkout",
-                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
                 headerStyle: {
                     backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
                 },
