@@ -21,7 +21,8 @@ const SearchResults = () => {
   return (
     <View style={styles.container}>
       <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={(uri)} />
-      <View style={styles.containerx} >
+      <View style={styles.login}>
+      <View style={styles.containerx}>
       <BlurView>
       <View style={styles.container3}>
         <SearchForm2/>
@@ -64,6 +65,7 @@ const SearchResults = () => {
       </BlurView>
       </View>
       </View>
+      </View>
 
   );
 };
@@ -77,6 +79,19 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     // marginTop:400,
     height:2000,
+
+  },
+
+  login: {
+    width: "99%",
+    height: "75%",
+    borderColor: 'rgba(0, 178, 255, 0.5)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderRadius: 20,
+    alignItems: 'center',
+    overflow: "hidden", 
+    top:"1%",
 
   },
   
@@ -109,7 +124,7 @@ const styles = StyleSheet.create({
 
   containerx: {
     justifyContent: 'center',
-    marginTop: 450,
+    marginTop: 185,
     width:360,
     borderRadius:8
   },
