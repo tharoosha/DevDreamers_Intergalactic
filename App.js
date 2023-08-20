@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
 
+
 import Home from "./screens/Home"
 import Search from "./screens/Search"
 import SeatBooking from "./screens/SeatBooking"
@@ -17,6 +18,7 @@ import SignUp from "./screens/SignUp"
 import SignIn from "./screens/SignIn"
 import TravelGuide from "./screens/TravelGuide"
 import Destinations from "./screens/Destination";
+import MyBookings from "./screens/MyBooking";
 
 
 const theme = {
@@ -57,6 +59,7 @@ export default function App() {
   }
 
   return (
+
 
 
     // <NavigationContainer>

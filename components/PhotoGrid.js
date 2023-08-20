@@ -11,6 +11,7 @@ const PhotoGrid = () => {
     { title: 'Photo 6', source: require('../assets/images/image_4.png') },
   ]
 
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {photos.map((photo, index) => (

@@ -59,7 +59,7 @@ const Flexbox = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
+    width: 320,
     flexDirection: 'row', // To align columns side by side
     marginLeft: 25,
     justifyContent: 'space-around',
