@@ -2,10 +2,20 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import CustomButton from './CustomButton';
 import { BlurView } from 'expo-blur';
+import { useNavigation } from '@react-navigation/native'
+
 
 const PaidCard = ({ tab1Rows, tab2Rows }) => {
   const [activeTab, setActiveTab] = useState(1);
+  const navigation = useNavigation();
 
+  const handleSubmit1 = () => {
+    navigation.navigate('bookings')
+  }
+
+  const handleSubmit2 = () => {
+    navigation.navigate('InvoiceReceipt')
+  }
   return (
     <View style={styles.container}>
       <View style={styles.tabContainer}>

@@ -7,10 +7,20 @@ import CustomButton from './CustomButton';
 import Button from './Button';
 import CardBoxButton from './CardBoxButton';
 
+import { useNavigation } from '@react-navigation/native'
 
 const CardBox = ({ dateofp, price, airlines, dateoftravel,from,time,to,numberofSeats,buttonname }) => {
 
   const uri = '../assets/icons/Spaceships/SpaceX.svg'
+  const navigation = useNavigation();
+
+  const handleSubmit1 = () => {
+    navigation.navigate('bookings')
+  }
+
+  const handleSubmit2 = () => {
+    navigation.navigate('InvoiceReceipt')
+  }
 
   return (
     <View>
@@ -74,6 +84,7 @@ const CardBox = ({ dateofp, price, airlines, dateoftravel,from,time,to,numberofS
             textcolor={Color.white}
             alignItems="flex-end"
             width="40%"
+            onPress={handleSubmit2}
           />
           </View>
         </View>

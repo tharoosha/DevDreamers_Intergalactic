@@ -8,6 +8,7 @@ import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from "../components/Button";
 
+// import { useNavigation } from '@react-navigation/native'
 
 import SeatSetup from "../components/SeatSetup";
 import Flexbox from "../components/Layout";
@@ -22,6 +23,14 @@ import bg from "../assets/images/Shadow_Realm_resize.png"
 
 const SeatBooking = () => {
   const navigation = useNavigation();
+
+  const handleSubmit1 = () => {
+    navigation.navigate('bookings')
+  }
+
+  const handleSubmit2 = () => {
+    navigation.navigate('InvoiceReceipt')
+  }
 
   return (
     <View style={styles.container}>

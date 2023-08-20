@@ -8,6 +8,7 @@ import { BlurView } from 'expo-blur'
 import resultData from '../data/result_data.json'
 import HorizontalLine from '../components/HorizontalLine'
 // import SearchForm2 from '../components/SearchForm2'
+import { useNavigation } from '@react-navigation/native'
 
 
 
@@ -17,6 +18,12 @@ const uri = require('..//assets/images/Shadow_Realm_resize.png')
 
 
 const SearchResults = () => {
+
+  const navigation = useNavigation()
+
+  const handleSubmit = () => {
+    navigation.navigate('Seatbookings')
+  }
 
   // const [resultData, setResultData] = useState()
 
@@ -57,6 +64,8 @@ const SearchResults = () => {
                       bgcolor={'deepskyblue'}
                       width={155}
                       height={40}
+                      onPress={handleSubmit}
+
                     />
 
                     <HorizontalLine color="white" height={2} opacity={0.5} bottommargin={5} />
@@ -85,7 +94,7 @@ const styles = StyleSheet.create({
   },
 
   login: {
-    width: "99%",
+    width: "90%",
     height: "75%",
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
@@ -94,6 +103,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     overflow: "hidden",
     top: "1%",
+    left:23
 
   },
 

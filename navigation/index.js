@@ -26,7 +26,10 @@ import Destinations from '../screens/Destination';
 import MyBookings from '../screens/MyBooking';
 import Checkout from "../screens/Checkout";
 import CustomHeader from '../components/header';
+import SearchResults from "../screens/SearchResults"
+import InvoiceReceipt from '../screens/InvoiceReceipt';
 import { useNavigation } from '@react-navigation/native'
+
 
 const Stack = createStackNavigator()
 
@@ -100,5 +103,10 @@ export default () => <NavigationContainer ref={navigationRef}>
         <Stack.Screen name="TravelGuide" component={TravelGuide} />
         <Stack.Screen name="Seatbookings" component={SeatBooking} />
         <Stack.Screen name="Checkout" component={Checkout} />
+        <Stack.Screen name="SearchResult" component={SearchResults} />
+        <Stack.Screen name="InvoiceReceipt" component={InvoiceReceipt} />
+        {/* <Stack.Screen name="MyBookings" component={SearchResults} /> */}
+
+        
     </Stack.Navigator>
 </NavigationContainer>

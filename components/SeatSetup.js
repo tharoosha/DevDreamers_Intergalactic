@@ -32,6 +32,16 @@ const tabLabels = ['First', 'Business', 'Economy']
 
 const SeatSetup = () => {
 
+  const navigation = useNavigation();
+
+  const handleSubmit1 = () => {
+    navigation.navigate('bookings')
+  }
+
+  const handleSubmit2 = () => {
+    navigation.navigate('InvoiceReceipt')
+  }
+
   const [currentTab, setCurrentTab] = useState(0)
   const [selectedIcons, setSelectedIcons] = useState(new Array(tabContent[currentTab].length).fill(false))
 
@@ -113,8 +123,8 @@ const SeatSetup = () => {
       </View>
 
       <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 20 }}>
-        <CustomButton title="Add To Cart" bgcolor="white" textcolor='deepskyblue' onPress={() => alert('ATC button tapped!')} />
-        <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor='white' onPress={() => alert('Proceed button tapped!')} />
+        <CustomButton title="Add To Cart" bgcolor="white" textcolor='deepskyblue' onPress={handleSubmit1} />
+        <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor='white' onPress={handleSubmit2} />
 
       </View>
     </View>
