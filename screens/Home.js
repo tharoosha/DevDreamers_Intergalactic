@@ -77,11 +77,11 @@ const Home = () => {
                         />
                     </View>
                 </View>
-                <Text style={{color:"#fff"}}> Where will you go</Text>
+                {/* <Text style={{color:"#fff"}}> Where will you go</Text>
                 <View style={styles.searchbar}>
                     <Ionicons name="search-outline" size={25} style={{width:40,transform: [{rotateY: '180deg'}]}} />
                     <TextInput placeholder="Search" style={{marginLeft:15,opacity:1,fontSize:20}}></TextInput>
-                </View>
+                </View> */}
             </View>
             <View style={styles.bottomview}>
                 <View>
@@ -205,7 +205,7 @@ const styles = StyleSheet.create(
             // borderTopRightRadius:50,
             // borderColor: Color.ashhh,
             // borderWidth: 1,
-            top: "25%"
+            top: "20%"
             // height:"80%"
           },
 
