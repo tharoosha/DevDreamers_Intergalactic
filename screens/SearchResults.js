@@ -5,9 +5,9 @@ import { SearchForm, Button, HomeHeader, Invoice, SearchForm3 } from "../compone
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles"
 import { LinearGradient } from 'expo-linear-gradient'
 import { BlurView } from 'expo-blur'
-// import resultData from '../data/result_data.json';
-import HorizontalLine from '../components/HorizonatalLine'
-import SearchForm2 from '../components/SearchForm2'
+import resultData from '../data/result_data.json'
+import HorizontalLine from '../components/HorizontalLine'
+// import SearchForm2 from '../components/SearchForm2'
 
 
 
@@ -18,7 +18,7 @@ const uri = require('..//assets/images/Shadow_Realm_resize.png')
 
 const SearchResults = () => {
 
-  const [resultData, setResultData] = useState()
+  // const [resultData, setResultData] = useState()
 
   return (
     <View style={styles.container}>
@@ -27,7 +27,7 @@ const SearchResults = () => {
         <View style={styles.containerx}>
           <BlurView>
             <View style={styles.container3}>
-              <SearchForm2 />
+              <SearchForm />
             </View>
 
             <View>
