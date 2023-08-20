@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native"
 import { useFonts } from 'expo-font'
 import { Image } from "expo-image"
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 // import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -25,8 +26,19 @@ const theme = {
     background: "transparent",
   },
 }
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-const Stack = createStackNavigator()
+const MainTabNavigator = () => {
+  return (
+    <Tab.Navigator screenOptions={{headerShown: false}}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Places" component={Destinations} />
+      <Tab.Screen name="Search" component={Search} />
+      <Tab.Screen name="Booking" component={SeatBooking} />
+    </Tab.Navigator>
+  );
+};
 
 export default function App() {
 
@@ -47,9 +59,17 @@ export default function App() {
   return (
 
 
-    <>
-        <Navigation />
-    </>
+    // <NavigationContainer>
+    //   <Stack.Navigator initialRouteName="SignIn" screenOptions={{
+    //             headerShown: false, // Hide the header bar for all screens
+    //         }}>
+    //     <Stack.Screen name="SignIn" component={SignIn} />
+    //     <Stack.Screen name="Home" component={MainTabNavigator} screenOptions={{headerShown: false}}/>
+    //     <Stack.Screen name="SignUp" component={SignUp} />
+    //   </Stack.Navigator>
+    //   {/* <MainTabNavigator /> */}
+    // </NavigationContainer>
+    <Navigation />
   );
 
 }

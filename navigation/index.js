@@ -19,29 +19,38 @@ import Bookmarks from '../screens/TravelGuide';
 // import Settings from '../screens/demo';
 import Register from "../screens/SignUp"
 import Search from '../screens/Search';
+import TravelGuide from '../screens/TravelGuide';
+import Destinations from '../screens/Destination';
 
 const Stack = createStackNavigator();
 
 function Main(){
     const Tab = createBottomTabNavigator();
 
-    return <Tab.Navigator
+    return (<Tab.Navigator
         initialRouteName="home" 
         tabBar={props => <TabBar {...props} />}
-        sceneContainerStyle={{ backgroundColor: Color.deepskyblue }}
+        // sceneContainerStyle={{ backgroundColor: Color.deepskyblue }}
+        screenOptions={{headerShown: false}}
     >
-        <Tab.Screen name="home" component={Home2} />
-        <Tab.Screen name="places" component={Location} />
+        <Tab.Screen name="home" component={Home} />
+        <Tab.Screen name="places" component={Destinations} />
         <Tab.Screen name="bookings" component={Booking} />
+        {/* <Tab.Screen name="bookings" component={TravelGuide} /> */}
         <Tab.Screen name="Search" component={Search} />
-    </Tab.Navigator>;
-}
+    </Tab.Navigator>);
+};
 
 export default () => <NavigationContainer ref={navigationRef}>
-    <Stack.Navigator initialRouteName="login">
-        <Stack.Screen name="SignIn" component={Login} options={{ headerShown: false }}  />
-        <Stack.Screen name="main" component={Main} options={{ headerShown: false }} /> 
-        <Stack.Screen name="SignUp" component={Register} options={{ headerShown: false }}  />
-        {/* <Stack.Screen name="Home" component={Home} options={{headerShown: false}} /> */}
+    <Stack.Navigator 
+        initialRouteName="SignIn"
+        screenOptions={{
+            headerShown: false, // Hide the header bar for all screens
+        }}
+    >
+        <Stack.Screen name="SignIn" component={Login}  />
+        <Stack.Screen name="main" component={Main} /> 
+        <Stack.Screen name="SignUp" component={Register} />
+        <Stack.Screen name="TravelGuide" component={TravelGuide} />
     </Stack.Navigator>
 </NavigationContainer>;

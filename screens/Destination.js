@@ -8,6 +8,11 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+import TravelGuide from "./TravelGuide";
+import { useNavigation } from '@react-navigation/native';
+import { BlurView } from 'expo-blur';
+
+
 // import img from "/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image 4 (1).png"
 
 const planetCardProps = [
@@ -61,19 +66,29 @@ const planetCardProps = [
   },
 ];
 
+
+
 const PlanetContainer = ({
     image_path,
     locationDescription,
     voyageDescription,
   }) => {
 
-    console.log("PlanetContainer rendering:", locationDescription); // Debug log
+
+    const navigation = useNavigation();
+    const handler = () => {
+      navigation.navigate('TravelGuide')
+    }
+
+    // console.log("PlanetContainer rendering:", locationDescription); // Debug log
     return (
     <View >
-        <TouchableOpacity  style={styles.destinations}
+      
+        <TouchableOpacity  style={styles.destinations} 
+            onPress={handler}
         >
             {/* <View style={styles.destinations}> */}
-            <Image source={image_path} style={[styles.image, {width:"22%", height:"80%", marginHorizontal:"4%", top: "2%"}]} />
+            <Image source={image_path} style={[styles.image, {width:"25%", height:"80%", marginHorizontal:"4%", top: "2%"}]} />
             <View style={styles.textContainer}>
                 <Text style={{ color: "white", fontSize: 20 }}>
                 {locationDescription}
@@ -86,7 +101,7 @@ const PlanetContainer = ({
             </View>
             {/* </View> */}
         </TouchableOpacity>
-        
+       
     </View>
       
     );
@@ -97,30 +112,39 @@ const PlanetContainer = ({
     return <PlanetContainer {...item} />;
   };
   
-  const Destinations = () => {
+const Destinations = () => {
     console.log("Destinations rendering"); // Debug log
     return (
-      <ImageBackground
-        source={require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png")}
-        style={styles.backgroundImage}
-        resizeMode="cover"
-      >
-        <View style={{paddingTop: 50}}>
-        <FlatList
-          data={planetCardProps}
-          keyExtractor={(_, index) => index.toString()}
-          renderItem={renderItem}
-          ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
-        />
-        </View>
+      
+          <ImageBackground
+            source={require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png")}
+            style={styles.backgroundImage}
+            resizeMode="cover"
+          >
+            
+            <View style={styles.login}>
+              <BlurView tint="default" intensity={15} >
 
-        {/* // <PlanetContainer {...planetCardProps[0]} />
-        // <View style={{ height: 130 }} />
-        // <PlanetContainer {...planetCardProps[1]} /> */}
+                <View style={{paddingTop: 50}}>
+                  <FlatList
+                    data={planetCardProps}
+                    keyExtractor={(_, index) => index.toString()}
+                    renderItem={renderItem}
+                    ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+                  />
+                </View>
+              </BlurView>
+            </View>
 
-      </ImageBackground>
+            {/* // <PlanetContainer {...planetCardProps[0]} />
+            // <View style={{ height: 130 }} />
+            // <PlanetContainer {...planetCardProps[1]} /> */}
+
+
+          </ImageBackground>
+        
     );
-  };
+};
 
 const styles = StyleSheet.create({
   backgroundImage: {
@@ -150,6 +174,18 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignSelf: "center",
     margin: "4%"
+  },
+  login: {
+    width: "92%",
+    height: "80%",
+    borderColor: 'rgba(0, 178, 255, 0.5)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderRadius: 20,
+    alignItems: 'center',
+    overflow: "hidden", 
+    top:"8%",
+    left:"4%"
   },
 });
 

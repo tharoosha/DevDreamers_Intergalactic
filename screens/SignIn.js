@@ -31,6 +31,7 @@ const SignIn = () => {
 
     //validation part
     RootNavigation.navigate("main")
+    // navigation.navigate("Home")
 
   };
 

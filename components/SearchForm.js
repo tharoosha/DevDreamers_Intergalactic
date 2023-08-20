@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet,TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
 
 
 // import {Button, Input} from '../components'
@@ -16,17 +17,23 @@ import { Feather } from '@expo/vector-icons';
 
 const SearchForm = () => {
   // const router = useRouter();
+  const placeholderTextColor = isFocused ? 'rgba(236, 228, 242, 1)' : 'rgba(141, 142, 153, 0.7)';
+  const [isFocused, setIsFocused] = useState(false);
+
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [mode, setMode] = useState('');
 
+  const navigation = useNavigation();
   const handleSubmit = () => {
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Date:', date);
-    console.log('Mode',mode)  
+    console.log('Mode',mode);
+    navigation.navigate('bookings')
+
   };
 
   const [selectedDate, setSelectedDate] = useState('');
@@ -98,7 +105,10 @@ const SearchForm = () => {
                 value={date}
                 onChangeText={(text) => setDate(text)}
                 placeholder={'DD/MM/YYYY'}
-                placeholderTextColor={Color.white}
+                placeholderTextColor={placeholderTextColor}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                borderColor={placeholderTextColor}
                 
               />
               <TouchableOpacity style={styles.searchBtn} onPress={showDatePicker}>
@@ -107,7 +117,7 @@ const SearchForm = () => {
                   resizeMode='contain'
                   style={styles.searchBtnImage}
                 /> */}
-                <Feather name="calendar" size={24} color={Color.white} style={styles.calendarIcon} />
+                <Feather name="calendar" size={24} color={placeholderTextColor} style={styles.calendarIcon} />
               </TouchableOpacity> 
             </View>
 
@@ -133,12 +143,13 @@ const SearchForm = () => {
               onChangeText={(text) => setMode(text)}
               width={145}
               label={"Mode"}
+            
             />
           </View>
           
         </View>
 
-        <View style={{marginBottom: "10%"}}>
+        <View style={{marginBottom: "7%"}}>
           <View style={styles.lineView} />
 
           <Button title="Submit" 
@@ -147,12 +158,12 @@ const SearchForm = () => {
             bgcolor={Color.deepskyblue}
             textcolor={Color.white}
           />
-          <Button title="Submit" 
+          {/* <Button title="Submit" 
             onPress={handleSubmit}
             text={"Compair Places"}
             bgcolor={Color.white}
             textcolor={Color.deepskyblue}
-          />
+          /> */}
         </View>
 
       </View>
@@ -186,7 +197,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: 'center',
 
-    marginLeft: 5
+    marginLeft: 5,
+    top:2
   },
   DateTimeContainer:{
     flex: 1,
@@ -201,7 +213,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: 80,
     height: 13,
-    margin: 7,
+    margin: 5,
     paddingLeft: 10
   },
   searchWrapper:{

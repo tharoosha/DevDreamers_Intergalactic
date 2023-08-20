@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import {CustomCard} from '../components/CustomCard';
 import bg from "../assets/images/bgImage.jpeg";
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
+import { LinearGradient } from 'expo-linear-gradient';
 
 import spacecraft_2 from "../assets/images/spacecraft_2.png";
 import spacecraft_3 from "../assets/images/spacecraft_3.png";
@@ -51,51 +52,58 @@ export const HomeScreen = () => {
            </CustomCard>);
   };
   return (
-          <View style={styles.container}>
-             <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={bg} />
-
-              <View style={styles.topview}>
-                  <View style={styles.welcomecontainer}>
-                      <Text style={styles.welcomemessage}>{"Hello,<br/>John Doe".split("<br/>").join("\n")}</Text>
-                      <View style={styles.circle}>
-                      <Image
+        <View style={styles.container}>
+            <Image style={[styles.backgroundImage, StyleSheet.absoluteFill]} source={bg} />
+            <LinearGradient
+                // Background Linear Gradient
+                colors={['rgba(4, 8, 19, 0.89)','#000']}
+                style={styles.rectangleLineargradient}
+            />
+            <View style={styles.topview}>
+                <View style={styles.welcomecontainer}>
+                    <Text style={styles.welcomemessage}>{"Hello,<br/>John Doe".split("<br/>").join("\n")}</Text>
+                    <View style={styles.circle}>
+                        <Image
                             source={require('../assets/images/avatar.jpeg')} // Replace with the path to your profile image
                             style={styles.profileImage}
                         />
-                      </View>
-                  </View>
-                  <Text style={{color:"#fff"}}> Where will you go</Text>
-                  <View style={styles.searchbar}>
+                    </View>
+                </View>
+                <Text style={{color:"#fff"}}> Where will you go</Text>
+                <View style={styles.searchbar}>
                     <Ionicons name="search-outline" size={25} style={{width:40,transform: [{rotateY: '180deg'}]}} />
                     <TextInput placeholder="Search" style={{marginLeft:15,opacity:1,fontSize:20}}></TextInput>
-                  </View>
-              </View>
-              <View style={styles.bottomview}>
-                <CustomCard elevated={true} style={{backgroundColor:"#fff",marginHorizontal:24,marginTop:-40,padding:30,borderRadius:10,flexDirection:"row",justifyContent:"space-between"}}>
-                    <View style={{alignItems:"center"}}>
-                        <Text style={{fontWeight:"bold", marginBottom:10}}>Balance</Text>
-                        <Text style={{fontWeight:"bold",fontSize:18}}>$ 18</Text>
-                    </View>
-                    <View style={{alignItems:"center"}}>
-                        <Text style={{fontWeight:"bold", marginBottom:10}}>Rewards</Text>
-                        <Text style={{fontWeight:"bold",fontSize:18}}>$ 10.25</Text>
-                    </View>
-                    <View style={{alignItems:"center"}}>
-                        <Text style={{fontWeight:"bold", marginBottom:10}}>Total Trips</Text>
-                        <Text style={{fontWeight:"bold",fontSize:18}}>189</Text>
-                    </View>
-                    </CustomCard>
-                <Text style={{marginHorizontal:26,marginVertical:20,fontWeight:"bold",fontSize:20, color:Color.white}}>Choose your Transport</Text>
-                <View>
-                    <FlatList
-                    data={DATA}
-                    renderItem={transportItem}
-                    keyExtractor={(item) => item.id}
-                  />
                 </View>
             </View>
-          </View>);
-}
+            <View style={styles.bottomview}>
+                <View>
+                    <CustomCard elevated={true} style={{backgroundColor:"#fff",marginHorizontal:24,marginTop:-40,padding:30,borderRadius:10,flexDirection:"row",justifyContent:"space-between"}}>
+                        <View style={{alignItems:"center"}}>
+                            <Text style={{fontWeight:"bold", marginBottom:10}}>Balance</Text>
+                            <Text style={{fontWeight:"bold",fontSize:18}}>$ 18</Text>
+                        </View>
+                        <View style={{alignItems:"center"}}>
+                            <Text style={{fontWeight:"bold", marginBottom:10}}>Rewards</Text>
+                            <Text style={{fontWeight:"bold",fontSize:18}}>$ 10.25</Text>
+                        </View>
+                        <View style={{alignItems:"center"}}>
+                            <Text style={{fontWeight:"bold", marginBottom:10}}>Total Trips</Text>
+                            <Text style={{fontWeight:"bold",fontSize:18}}>189</Text>
+                        </View>
+                    </CustomCard>
+                    <Text style={{marginHorizontal:26,marginVertical:20,fontWeight:"bold",fontSize:20, color:Color.white}}>Choose your Transport</Text>
+                    <View>
+                        <FlatList
+                        data={DATA}
+                        renderItem={transportItem}
+                        keyExtractor={(item) => item.id}
+                        />
+                    </View>
+                </View>
+            </View>
+        </View>
+        )
+};
 
 const styles = StyleSheet.create({
   topview:{
@@ -132,10 +140,10 @@ const styles = StyleSheet.create({
   },
   bottomview:{
     flex:2,
-    backgroundColor:"#011526",
+    // backgroundColor:"#011526",
     borderTopLeftRadius:50,
     borderTopRightRadius:50,
-    borderColor: Color.ashhh,
+    // borderColor: Color.ashhh,
     borderWidth: 1,
     top: 2
   },
@@ -160,6 +168,13 @@ const styles = StyleSheet.create({
     width: 85, // Adjust the size of the profile image
     height: 90, // Adjust the size of the profile image
     borderRadius: 40, // Make it a circle by setting half of width/height as borderRadius
+  },
+  rectangleLineargradient: {
+    top: "20%",
+    width: 468,
+    height: "80%",
+    backgroundColor: "transparent",
+    position: "absolute"
   },
 });
 
