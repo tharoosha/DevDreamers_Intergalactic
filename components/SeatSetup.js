@@ -3,6 +3,9 @@ import {Text, StyleSheet,TouchableOpacity, View, Button, ScrollView } from 'reac
 import { SvgXml } from 'react-native-svg';
 import CustomButton from './CustomButton';
 
+// import NewButton from './NewButton';
+import { useNavigation } from '@react-navigation/native';
+
 
 const svgContent = `
 <svg fill="{FILL_COLOR}" width="40px" height="40px" viewBox="0 0 64 64" id="Layer_1_1_" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -111,6 +114,7 @@ const SeatSetup = () => {
     <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 20 }}>
         <CustomButton title="Add To Cart" bgcolor="white" textcolor='deepskyblue' onPress={() => alert('ATC button tapped!')} />
         <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor='white' onPress={() => alert('Proceed button tapped!')} />
+
       </View>
     </View>
   );
