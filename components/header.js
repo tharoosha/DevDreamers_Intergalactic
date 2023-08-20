@@ -11,7 +11,7 @@ const CustomHeader = ({destination1, destination2, title}) => {
     const navigation = useNavigation();
 
     return (
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '241%'}}>
+            <View style={{ flexDirection: 'row', gap:'155' , alignItems: 'center', width: '241%'}}>
                 <TouchableOpacity onPress={() => navigation.navigate(destination1)}>
 
                 {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}
@@ -25,8 +25,8 @@ const CustomHeader = ({destination1, destination2, title}) => {
                 </TouchableOpacity>
                 <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{title}</Text>
 
-                <TouchableOpacity onPress={() => navigation.navigate(destination2)}>
-                    <Icon2 name="person" size={30} color="black" style={{ marginRight: 10 }}/>
+                <TouchableOpacity style={{alignItems: 'flex-end'}} onPress={() => navigation.navigate(destination2)}>
+                    <Icon2 name="person" size={30} color="black" style={{ marginRight: 10 , alignItems: 'flex-end' }}/>
                 </TouchableOpacity>
                 
             </View>

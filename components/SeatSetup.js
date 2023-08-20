@@ -23,9 +23,9 @@ const svgContent = `
 `
 
 const tabContent = [
-  Array(22).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'primary')} />),
-  Array(7).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+  Array(7).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'primary')} />),
   Array(14).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+  Array(28).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
 ]
 
 const tabLabels = ['First', 'Business', 'Economy']

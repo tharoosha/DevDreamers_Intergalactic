@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     container: {
         // borderWidth: 1,
         flexDirection: 'row',
-        width: '80%',
+        width: '84%',
         alignSelf: 'center',
         position: 'absolute',
         bottom: 25,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     },
     navActionBtnFocused: {
         paddingVertical: 10,
-        width: '38%',
+        width: '42%',
         flexDirection: 'row',
         justifyContent: 'center',
         alignContent: 'center',

@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     overflow: "hidden", 
-    marginBottom: 10,
-    marginTop: 150,
+    marginBottom: 40,
+    marginTop: 30,
   },
   login: {
     width: 352,
