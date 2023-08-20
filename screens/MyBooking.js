@@ -14,6 +14,7 @@ import Flexbox from "../components/Layout";
 import PaidCard from "../components/PaidCard";
 import CardBox from "../components/CardBox";
 import CustomButton from "../components/CustomButton";
+import cardBoxData from "../DummyData/cardBoxData";
 
 
 //const uri = "https://drive.google.com/file/d/18HintxbTmj9eBv5pLQezpN-b4ru3G--X/view?usp=drive_link" ;
@@ -22,20 +23,43 @@ const uri = '..//assets/images/Shadow_Realm_resize.png'
 
 const Tab1Rows = (
     <View>
-<CardBox/>
-        <CardBox/>
-        <CardBox/>
-        <CardBox/>
+
+     {cardBoxData[0].map((data, index) => (
+        <CardBox
+          dateofp={data.dateofp}
+          price={data.price}
+          airlines={data.airlines}
+          dateoftravel={data.dateoftravel}
+          from={data.from}
+          time={data.time}
+          to={data.to}
+          numberofSeats={data.numberofSeats}
+          buttonname={data.buttonname}
+        />
+      ))}
+
       {/* Add more rows here */}
     </View>
   );
   
   const Tab2Rows = (
     <View>
-      <CardBox/>
-        <CardBox/>
-        <CardBox/>
-        <CardBox/>
+     {cardBoxData[1].map((data, index) => (
+        <CardBox
+          dateofp={data.dateofp}
+          price={data.price}
+          airlines={data.airlines}
+          dateoftravel={data.dateoftravel}
+          from={data.from}
+          time={data.time}
+          to={data.to}
+          numberofSeats={data.numberofSeats}
+          buttonname={data.buttonname}
+        />
+      ))}
+
+
+
       {/* Add more rows here */}
     </View>
   );
@@ -70,11 +94,11 @@ const MyBookings = () => {
           justifyContent: 'center',
         }}> 
      <View style={styles.login }>
+     <BlurView tint="default" intensity={15} style={styles.blurView2}> 
      <ScrollView>
-      <BlurView tint="default" intensity={15} style={styles.blurView2}>
         <PaidCard tab1Rows={Tab1Rows} tab2Rows={Tab2Rows} />
-      </BlurView>
       </ScrollView>
+      </BlurView> 
     </View>
 
 
@@ -120,6 +144,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     overflow: "hidden",
     marginTop: 60, 
+
   },
   rectangleLineargradient: {
     top: 519,
@@ -141,6 +166,7 @@ const styles = StyleSheet.create({
     width: '100%', // Make BlurView fit the screen width
     justifyContent: 'center',
     alignItems: 'center',
+
   },
 
 }) 

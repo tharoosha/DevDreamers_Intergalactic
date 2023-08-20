@@ -8,68 +8,68 @@ import Button from './Button';
 import CardBoxButton from './CardBoxButton';
 
 
-const CardBox = () => {
+const CardBox = ({ dateofp, price, airlines, dateoftravel,from,time,to,numberofSeats,buttonname }) => {
 
   const uri = '../assets/icons/Spaceships/SpaceX.svg'
 
   return (
-    <View style={styles.container}>
+    <View>
+      <View style={styles.container}>
       {/* First column */}
       <View style={[styles.column0, styles.spaceBetweenColumn]}>
-
-        <View style={styles.cell0}>
-          <Text style={styles.cellText0}>Jetwing Airlines</Text>
-        </View>
 
         <View style={[styles.column0, styles.spaceBetweenColumn]}>
         <View style={styles.row0}>
           <View style={styles.cell1}>
-            <Text style={styles.cellText1}>BIA Bonavi</Text>
+            <Text style={styles.cellText1}>{dateofp}</Text>
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText1}>MXY Mikavu</Text>
+            <Text style={styles.cellText1}>{price}</Text>
           </View>
           </View>
         </View>
         <View style={styles.row0}>
           <View style={styles.cell1}>
-            <Text style={styles.cellText2}>2023-08-18</Text>
+            <Text style={styles.cellText2}>{airlines}</Text>
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText2}>12.30PM</Text>
+            <Text style={styles.cellText2}>       </Text>
           </View>
         </View>
 
         <View style={styles.row0}>
           <View style={styles.cell1}>
-            <Text style={styles.cellText2}>2023-08-18</Text>
+            <Text style={styles.cellText2}>{dateoftravel}</Text>
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText2}>12.30PM</Text>
+            <Text style={styles.cellText2}>from {from}</Text>
           </View>
         </View>
 
         <View style={styles.row0}>
           <View style={styles.cell1}>
-            <Text style={styles.cellText2}>2023-08-18</Text>
+            <Text style={styles.cellText2}>{time}</Text>
           </View>
 
           <View style={styles.cell2}>
-            <Text style={styles.cellText2}>12.30PM</Text>
+            <Text style={styles.cellText2}>to {to}</Text>
           </View>
         </View>
 
+
+
         <View style={styles.row0}>
-          <View style={styles.cell1}>
-            <Text style={styles.cellText2}>          </Text>
+
+        <View style={styles.cell1}>
+            <Text style={styles.cellText2}>{numberofSeats} Seats</Text>
           </View>
 
-          <View style={styles.cell2}>
+          <View style={styles.cellb}>
           <CardBoxButton title="Submit" 
-            text={"Reciept"}
+            text={buttonname}
             bgcolor={Color.deepskyblue}
             textcolor={Color.white}
             alignItems="flex-end"
@@ -79,7 +79,14 @@ const CardBox = () => {
         </View>
 
         </View>
+
       </View>
+
+      <View style={styles.horizontalLine}></View>
+      
+    </View>
+
+      
 
   );
 };
@@ -90,7 +97,7 @@ const styles = StyleSheet.create({
     width: 320,
     flexDirection: 'row', // To align columns side by side
     marginLeft: 2,
-    justifyContent: 'space-around',
+    marginBottom: -30,
     
     
   },
@@ -131,11 +138,11 @@ const styles = StyleSheet.create({
     
   },
   cell1: {
-    width: 120,
+    width: 140,
     height: 35,
     //  borderWidth: 1,
     //  borderColor: 'white',
-     alignItems: 'fle',
+     alignItems: 'flex-start',
      justifyContent: 'center',
 
   },
@@ -170,6 +177,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  cellb: {
+    width: 120,
+    height: 98,
+    // borderWidth: 1,
+    // borderColor: 'white',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+
+  },
   cellText0: {
     fontSize: 25,
     color: 'white' ,
@@ -186,6 +202,16 @@ const styles = StyleSheet.create({
     color: 'white' ,
     fontFamily : 'Poppins-Regular' , 
   },
+
+  horizontalLine: {
+    width: '70%',
+    borderBottomColor: 'white', // Color of the line
+    borderBottomWidth: 1, // Thickness of the line
+    opacity: 0.5, // Change to set visibility
+    alignSelf: 'center',
+    marginBottom: 18,
+  },
+
 });
 
 export default CardBox;

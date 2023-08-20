@@ -20,10 +20,12 @@ const PaidCard = ({ tab1Rows, tab2Rows }) => {
           style={[styles.tabButton, activeTab === 2 && styles.activeTabButton]}
           onPress={() => setActiveTab(2)}
         >
+
           <Text style={[styles.tabButtonText, activeTab === 2 && styles.activeTabButtonText]}>Cart</Text>
         </TouchableOpacity>
-
       </View>
+      <View style={styles.horizontalLine}></View>
+
       <View style={styles.rowsContainer}>
         {activeTab === 1 && tab1Rows}
         {activeTab === 2 && tab2Rows}
@@ -35,6 +37,7 @@ const PaidCard = ({ tab1Rows, tab2Rows }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
 
   },
   tabContainer: {
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   activeTabButton: {
-    backgroundColor: 'deepskyblue',
+    backgroundColor: 'rgba(0, 178, 255, 0.5)',
     BlurView: 'default',
     borderRadius: 10,
     paddingHorizontal: 60,
@@ -62,8 +65,20 @@ const styles = StyleSheet.create({
   },
   rowsContainer: {
     flex: 1,
-    padding: 5,
+    padding: 8,
+
   },
+
+
+  horizontalLine: {
+    width: '90%',
+    borderBottomColor: 'white', // Color of the line
+    borderBottomWidth: 1, // Thickness of the line
+    marginVertical: 2, // Adjust as needed
+    opacity: 0.5, // Change to set visibility
+    alignSelf: 'center',
+  },
+
 });
 
 export default PaidCard;
