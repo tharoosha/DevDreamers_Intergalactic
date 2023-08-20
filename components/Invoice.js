@@ -110,7 +110,7 @@ const Invoice = ({ promoCode, setPromoCode }) => {
             placeholder="Enter Code"
             onChangeText={handlePromoCodeChange}
             value={promoCode}
-            placeholderTextColor="rgba(255, 255, 255, 0.5)"
+            placeholderTextColor="white"
           />
         </View>
       </ScrollView>
