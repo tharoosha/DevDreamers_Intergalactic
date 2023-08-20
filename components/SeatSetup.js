@@ -28,8 +28,6 @@ const tabLabels = ['First', 'Business', 'Economy'];
 
 const SeatSetup = () => {
 
-  const navigation = useNavigation();
-
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedIcons, setSelectedIcons] = useState(new Array(tabContent[currentTab].length).fill(false));
 
@@ -110,9 +108,9 @@ const SeatSetup = () => {
       </ScrollView>
     </View>
     
-    <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
-        <CustomButton title="Add To Cart" onPress={() => alert('ATC button tapped!')} />
-        <CustomButton title="Proceed" onPress={() => alert('Proceed button tapped!')} />
+    <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 20 }}>
+        <CustomButton title="Add To Cart" bgcolor="white" textcolor='deepskyblue' onPress={() => alert('ATC button tapped!')} />
+        <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor='white' onPress={() => alert('Proceed button tapped!')} />
       </View>
     </View>
   );

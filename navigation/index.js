@@ -38,7 +38,7 @@ function Main() {
         <Tab.Screen name="home" component={Home} />
         <Tab.Screen name="places" component={Destinations} />
         <Tab.Screen name="bookings" component={MyBookings} />
-        <Tab.Screen name="Search" component={Search} />
+        <Tab.Screen name="Search" component={SeatBooking} />
     </Tab.Navigator>)
 };
 
