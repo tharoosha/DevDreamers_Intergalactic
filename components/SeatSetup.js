@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import {Text, StyleSheet,TouchableOpacity, View, Button, ScrollView } from 'react-native';
-import { SvgXml } from 'react-native-svg';
-import CustomButton from './CustomButton';
+import React, { useState } from 'react'
+import { Text, StyleSheet, TouchableOpacity, View, Button, ScrollView } from 'react-native'
+import { SvgXml } from 'react-native-svg'
+import CustomButton from './CustomButton'
+
+import { useNavigation } from '@react-navigation/native'
 
 // import NewButton from './NewButton';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 
 
 const svgContent = `
@@ -19,31 +21,31 @@ const svgContent = `
 
 </g>
 </svg>
-`;
+`
 
 const tabContent = [
-    Array(22).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'primary')} />),
-    Array(7).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
-    Array(14).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
-  ];
+  Array(22).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'primary')} />),
+  Array(7).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+  Array(14).fill(<SvgXml xml={svgContent.replace(/\{FILL_COLOR\}/g, 'white')} />),
+]
 
-const tabLabels = ['First', 'Business', 'Economy'];
+const tabLabels = ['First', 'Business', 'Economy']
 
 const SeatSetup = () => {
 
-  const [currentTab, setCurrentTab] = useState(0);
-  const [selectedIcons, setSelectedIcons] = useState(new Array(tabContent[currentTab].length).fill(false));
+  const [currentTab, setCurrentTab] = useState(0)
+  const [selectedIcons, setSelectedIcons] = useState(new Array(tabContent[currentTab].length).fill(false))
 
   const handleTabChange = (index) => {
-    setCurrentTab(index);
-    setSelectedIcons(new Array(tabContent[index].length).fill(false));
-  };
+    setCurrentTab(index)
+    setSelectedIcons(new Array(tabContent[index].length).fill(false))
+  }
 
   const handleIconClick = (rowIndex, iconIndex) => {
-    const updatedSelectedIcons = [...selectedIcons];
-    updatedSelectedIcons[rowIndex * 7 + iconIndex] = !updatedSelectedIcons[rowIndex * 7 + iconIndex];
-    setSelectedIcons(updatedSelectedIcons);
-  };
+    const updatedSelectedIcons = [...selectedIcons]
+    updatedSelectedIcons[rowIndex * 7 + iconIndex] = !updatedSelectedIcons[rowIndex * 7 + iconIndex]
+    setSelectedIcons(updatedSelectedIcons)
+  }
 
   const renderTabButtons = () => {
     return tabLabels.map((label, index) => (
@@ -64,18 +66,18 @@ const SeatSetup = () => {
           {label}
         </Text>
       </TouchableOpacity>
-    ));
-  };
+    ))
+  }
 
   const renderTabContent = () => {
-    const items = tabContent[currentTab];
-    const numRows = Math.ceil(items.length / 7);
+    const items = tabContent[currentTab]
+    const numRows = Math.ceil(items.length / 7)
 
-    const rows = [];
+    const rows = []
     for (let i = 0; i < numRows; i++) {
-      const rowItems = items.slice(i * 7, (i + 1) * 7);
+      const rowItems = items.slice(i * 7, (i + 1) * 7)
       const rowView = rowItems.map((item, index) => {
-        const svgXml = svgContent.replace('{FILL_COLOR}', selectedIcons[i * 7 + index] ? 'deepskyblue' : 'white');
+        const svgXml = svgContent.replace('{FILL_COLOR}', selectedIcons[i * 7 + index] ? 'deepskyblue' : 'white')
         return (
           <View
             key={index}
@@ -88,61 +90,61 @@ const SeatSetup = () => {
           >
             <SvgXml xml={svgXml} />
           </View>
-        );
-      });
+        )
+      })
       rows.push(
         <View key={i} style={{ flexDirection: 'row', width: '100%', marginBottom: 5 }}>
           {rowView}
         </View>
-      );
+      )
     }
 
-    return <View>{rows}</View>;
-  };
+    return <View>{rows}</View>
+  }
 
   return (
     <View style={{ flex: 2 }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'center', padding: 1 , marginBottom: 8 , marginTop: 10}}>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', padding: 1, marginBottom: 8, marginTop: 10 }}>
         {renderTabButtons()}
       </View>
       <View style={{ borderRadius: 10, borderWidth: 1, borderColor: 'white', padding: 10, margin: 10 }}>
-      <ScrollView contentContainerStyle={{ padding: 1 }}>
-        {renderTabContent()}
-      </ScrollView>
-    </View>
-    
-    <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 20 }}>
+        <ScrollView contentContainerStyle={{ padding: 1 }}>
+          {renderTabContent()}
+        </ScrollView>
+      </View>
+
+      <View style={{ flexDirection: 'row', justifyContent: 'center', paddingHorizontal: 20 }}>
         <CustomButton title="Add To Cart" bgcolor="white" textcolor='deepskyblue' onPress={() => alert('ATC button tapped!')} />
         <CustomButton title="Proceed" bgcolor="deepskyblue" textcolor='white' onPress={() => alert('Proceed button tapped!')} />
 
       </View>
     </View>
-  );
-};
+  )
+}
 
 
 const styles = StyleSheet.create({
-    tabButtonsContainer: {
-      flexDirection: 'row',
-      marginBottom: 30,
-    },
-    tabButton: {
-      paddingHorizontal: 34,
-      paddingVertical: 10,
-    },
-    selectedTabButton: {
-      borderBottomWidth: 2,
-      borderBottomColor: 'deepskyblue',
-      borderBottomEndRadius: 10,
-    },
-    tabButtonText: {
-      color: 'white',
-    },
-    selectedTabButtonText: {
-      color: 'white',
-    },
-    // ...
-  });
+  tabButtonsContainer: {
+    flexDirection: 'row',
+    marginBottom: 30,
+  },
+  tabButton: {
+    paddingHorizontal: 34,
+    paddingVertical: 10,
+  },
+  selectedTabButton: {
+    borderBottomWidth: 2,
+    borderBottomColor: 'deepskyblue',
+    borderBottomEndRadius: 10,
+  },
+  tabButtonText: {
+    color: 'white',
+  },
+  selectedTabButtonText: {
+    color: 'white',
+  },
+  // ...
+})
 
 export default SeatSetup;
 
