@@ -12,6 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import * as RootNavigation from '../navigation/RootNavigation';
 
 import { Color, Border, FontFamily, FontSize } from "../constants/GlobalStyles";
 import { CustomInput, Input, Button} from '../components';
@@ -25,11 +26,12 @@ const SignIn = () => {
 
 
   const handleSubmit = () => {
-    console.log('Email:', email);
-    console.log('Password:', password); 
+    // console.log('Email:', email);
+    // console.log('Password:', password); 
 
     //validation part
-    navigation.navigate('Home')
+    RootNavigation.navigate("main")
+    // navigation.navigate("Home")
 
   };
 
