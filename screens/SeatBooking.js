@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet,Image, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { Image,StyleSheet, ImageBackground, View, Text, SafeAreaView, Dimensions, ScrollView } from "react-native";
 import { SearchForm } from "../components";
 import { BlurView } from 'expo-blur';
