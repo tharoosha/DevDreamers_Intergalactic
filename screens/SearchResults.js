@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical:10,
     // marginTop:400,
     height: 2000,
 
   },
 
   login: {
-    width: "90%",
+    width: "95%",
     height: "75%",
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     overflow: "hidden",
     top: "1%",
-    left:23
+    left:15
 
   },
 
