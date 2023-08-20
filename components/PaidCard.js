@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   activeTabButton: {
-    backgroundColor: 'rgba(0, 178, 255, 0.5)',
+    backgroundColor: 'white',
     BlurView: 'default',
     borderRadius: 10,
     paddingHorizontal: 60,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   activeTabButtonText: {
-    color: 'white',
+    color: 'deepskyblue',
   },
   rowsContainer: {
     flex: 1,

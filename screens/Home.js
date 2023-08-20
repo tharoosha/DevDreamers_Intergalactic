@@ -153,15 +153,15 @@ const styles = StyleSheet.create(
             position: "absolute"
           },
         login: {
-            width: "82%",
-            height: "59%",
+            width: "84%",
+            height: "62%",
             borderColor: 'rgba(0, 178, 255, 0.5)',
             borderWidth: 1,
             borderStyle: 'solid',
             borderRadius: 20,
             alignItems: 'center',
             overflow: "hidden", 
-            marginLeft: "9%",
+            marginLeft: "8%",
             // marginTop: "1%"
             top:"32%"
         },
@@ -218,8 +218,8 @@ const styles = StyleSheet.create(
                 alignItems: 'center',
             },
             profileImage: {
-                width: 85, // Adjust the size of the profile image
-                height: 90, // Adjust the size of the profile image
+                width: 92, // Adjust the size of the profile image
+                height: 92, // Adjust the size of the profile image
                 borderRadius: 40, // Make it a circle by setting half of width/height as borderRadius
             },
     }

@@ -17,49 +17,49 @@ import { BlurView } from 'expo-blur';
 
 const planetCardProps = [
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(1).png"),
+    image_path: require("../assets/images/planet/image_4_(1).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(3).png"),
+    image_path: require("../assets/images/planet/image_4_(3).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(2).png"),
+    image_path: require("../assets/images/planet/image_4_(2).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(4).png"),
+    image_path: require("../assets/images/planet/image_4_(4).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(5).png"),
+    image_path: require("../assets/images/planet/image_4_(5).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4.png"),
+    image_path: require("../assets/images/planet/image_4.png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(1).png"),
+    image_path: require("../assets/images/planet/image_4_(1).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
   },
   {
-    image_path: require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/planet/image_4_(3).png"),
+    image_path: require("../assets/images/planet/image_4_(3).png"),
     locationDescription: "Valora Crater",
     voyageDescription:
       "Embark on a daring voyage to Mars's mesmerizing Valora Crater...",
@@ -117,7 +117,7 @@ const Destinations = () => {
     return (
       
           <ImageBackground
-            source={require("/Users/vihidun/Desktop/My_files/Developments/RootCode_competition/Intergalactic/assets/images/Shadow_Realm_resize.png")}
+            source={require("../assets/images/Shadow_Realm_resize.png")}
             style={styles.backgroundImage}
             resizeMode="cover"
           >
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   destinations: {
     // position: "absolute",
-    width: "90%",
+    width: "94%",
     height:"80%",
     borderWidth: 1,
     backgroundColor: "rgba(0, 0, 0, 0.5)",

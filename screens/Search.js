@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   login: {
     width: 352,
-    height: 397,
+    height: 340,
     borderColor: 'rgba(0, 178, 255, 0.5)',
     borderWidth: 1,
     borderStyle: 'solid',
