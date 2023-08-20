@@ -10,18 +10,19 @@ import { navigationRef } from './RootNavigation';
 import TabBar from '../navigation/tabBar';
 
 import Home from '../screens/Home';
-import Home2 from '../screens/Home2'
+// import Home2 from '../screens/Home2'
 import Login from '../screens/SignIn';
 import SeatBooking from '../screens/SeatBooking';
 // import Account from '../screens/demos/Account';
-import Location from '../screens/Destination';
-import Bookmarks from '../screens/TravelGuide';
+// import Location from '../screens/Destination';
+// import Bookmarks from '../screens/TravelGuide';
 // import Settings from '../screens/demo';
 import Register from "../screens/SignUp"
 import Search from '../screens/Search';
 import TravelGuide from '../screens/TravelGuide';
 import Destinations from '../screens/Destination';
 import MyBookings from '../screens/MyBooking';
+import Checkout from "../screens/Checkout";
 
 const Stack = createStackNavigator();
 
@@ -37,7 +38,6 @@ function Main(){
         <Tab.Screen name="home" component={Home} />
         <Tab.Screen name="places" component={Destinations} />
         <Tab.Screen name="bookings" component={MyBookings} />
-        {/* <Tab.Screen name="bookings" component={TravelGuide} /> */}
         <Tab.Screen name="Search" component={Search} />
     </Tab.Navigator>);
 };
@@ -54,6 +54,6 @@ export default () => <NavigationContainer ref={navigationRef}>
         <Stack.Screen name="SignUp" component={Register} />
         <Stack.Screen name="TravelGuide" component={TravelGuide} />
         <Stack.Screen name="Seatbookings" component={SeatBooking} />
-        {/* <Stack.Screen name="" */}
+        <Stack.Screen name="Checkout" component={Checkout} />
     </Stack.Navigator>
 </NavigationContainer>;
