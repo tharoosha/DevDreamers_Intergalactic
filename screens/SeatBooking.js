@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     overflow: "hidden", 
     marginBottom: 10,
-    marginTop: 60,
+    marginTop: 190,
   },
   login: {
     width: 352,

@@ -97,9 +97,9 @@ const MyBookings = () => {
       }}>
         <View style={styles.login}>
           <BlurView tint="default" intensity={15} style={styles.blurView2}>
-            <ScrollView>
+            <View >
               <PaidCard tab1Rows={Tab1Rows} tab2Rows={Tab2Rows} />
-            </ScrollView>
+            </View>
           </BlurView>
         </View>
 

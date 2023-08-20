@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import CustomButton from './CustomButton';
 import { BlurView } from 'expo-blur';
 
@@ -26,10 +26,10 @@ const PaidCard = ({ tab1Rows, tab2Rows }) => {
       </View>
       <View style={styles.horizontalLine}></View>
 
-      <View style={styles.rowsContainer}>
+      <ScrollView style={styles.rowsContainer}>
         {activeTab === 1 && tab1Rows}
         {activeTab === 2 && tab2Rows}
-      </View>
+      </ScrollView>
     </View>
   );
 };
