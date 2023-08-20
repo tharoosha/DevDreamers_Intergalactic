@@ -153,7 +153,7 @@ const styles = StyleSheet.create(
             position: "absolute"
           },
         login: {
-            width: "84%",
+            width: "85%",
             height: "62%",
             borderColor: 'rgba(0, 178, 255, 0.5)',
             borderWidth: 1,
