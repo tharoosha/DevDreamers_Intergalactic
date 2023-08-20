@@ -48,7 +48,7 @@ function Main() {
             options={{
                 headerShown: true,
                 title: "Home",
-                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
                 headerStyle: {
                     backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
                 },
@@ -59,7 +59,7 @@ function Main() {
             options={{
                 headerShown: true,
                 title: "Places",
-                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
                 headerStyle: {
                     backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
                 },
@@ -70,18 +70,18 @@ function Main() {
             options={{
                 headerShown: true,
                 title: "Bookings",
-                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
                 headerStyle: {
                     backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
                 },
                 // headerTransparent: true, 
             }}
         />
-        <Tab.Screen name="Search" component={SeatBooking} 
+        <Tab.Screen name="Search" component={Search} 
             options={{
                 headerShown: true,
-                title: "SeatBooking",
-                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                title: "Search",
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
                 headerStyle: {
                     backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
                 },
@@ -100,11 +100,51 @@ export default () => <NavigationContainer ref={navigationRef}>
         <Stack.Screen name="SignIn" component={Login} />
         <Stack.Screen name="main" component={Main} /> 
         <Stack.Screen name="SignUp" component={Register} />
-        <Stack.Screen name="TravelGuide" component={TravelGuide} />
-        <Stack.Screen name="Seatbookings" component={SeatBooking} />
-        <Stack.Screen name="Checkout" component={Checkout} />
-        <Stack.Screen name="SearchResult" component={SearchResults} />
-        <Stack.Screen name="InvoiceReceipt" component={InvoiceReceipt} />
+        <Stack.Screen name="TravelGuide" component={TravelGuide} options={{
+                headerShown: true,
+                title: "TravelGuide",
+                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerStyle: {
+                    backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
+                },
+                // headerTransparent: true, 
+        }}/>
+        <Stack.Screen name="Seatbookings" component={SeatBooking} options={{
+                headerShown: true,
+                title: "SeatBooking",
+                headerLeft: () => <CustomHeader destination1={"SearchResult"} destination2={"bookings"} title={""} />,
+                headerStyle: {
+                    backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
+                },
+                // headerTransparent: true, 
+        }}/>
+        <Stack.Screen name="Checkout" component={Checkout} options={{
+                headerShown: true,
+                title: "Checkout",
+                headerLeft: () => <CustomHeader destination1={"places"} destination2={"bookings"} title={""} />,
+                headerStyle: {
+                    backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
+                },
+                // headerTransparent: true, 
+        }}/>
+        <Stack.Screen name="SearchResult" component={SearchResults} options={{
+                headerShown: true,
+                title: "SearchResult",
+                headerLeft: () => <CustomHeader destination1={"Search"} destination2={"bookings"} title={""} />,
+                headerStyle: {
+                    backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
+                },
+                // headerTransparent: true, 
+        }}/>
+        <Stack.Screen name="InvoiceReceipt" component={InvoiceReceipt} options={{
+                headerShown: true,
+                title: "InvoiceReceipt",
+                headerLeft: () => <CustomHeader destination1={"home"} destination2={"bookings"} title={""} />,
+                headerStyle: {
+                    backgroundColor: 'rgba(0, 178, 255, 0.1)', // Change the header color to #00B2FF
+                },
+                // headerTransparent: true, 
+        }}/>
         {/* <Stack.Screen name="MyBookings" component={SearchResults} /> */}
 
         
